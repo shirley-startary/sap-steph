@@ -1,0 +1,17 @@
+# Dependency directories
+node_modules/
+
+# Build folder
+.next/
+
+# VS Code Pair Programming
+.vs
+
+# i18n bundle messages
+lang/.messages
+
+# data/*
+.env
+
+# logs/*
+yarn-error.log
