@@ -1,6 +1,5 @@
-export default class extends React.Component {
-    render () {
-        return <h1>Vista principal</h1>
+import React from 'react';
 
-    }
-}
+const App = () => <h1>Vista principal</h1>;
+
+export default App;
