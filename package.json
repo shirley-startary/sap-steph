@@ -21,6 +21,7 @@
   "license": "ISC",
   "dependencies": {
     "@material-ui/core": "^4.8.3",
+    "@material-ui/icons": "^4.9.1",
     "@material-ui/styles": "^4.8.2",
     "firebase": "^7.7.0",
     "firebase-admin": "^8.9.1",

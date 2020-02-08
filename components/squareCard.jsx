@@ -1,4 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -26,7 +28,7 @@ const useStyles = {
 
 const SquareCard = (props) => {
   const classes = useStyles;
-  const { title, subtitle } = props;
+  const { title } = props;
 
   return (
     <Card
@@ -36,11 +38,12 @@ const SquareCard = (props) => {
       className={classes.card}
     >
       <CardContent className={classes.description}>
-        <Typography variant="h5" component="h2" gutterBottom>
-          { title }
-        </Typography>
-        <Typography variant="body1">
-          { subtitle }
+        <Typography variant="body1" gutterBottom>
+          <Link href="/info">
+            <a>
+              { title }
+            </a>
+          </Link>
         </Typography>
       </CardContent>
     </Card>
@@ -50,6 +53,5 @@ const SquareCard = (props) => {
 
 SquareCard.propTypes = {
   title: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
-  subtitle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
 };
 export default (SquareCard);

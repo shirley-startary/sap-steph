@@ -5,20 +5,31 @@ import SquareCard from '../components/squareCard';
 
 const objectives = [
   {
-    title: 'Objetivo1',
-    subtitle: 'Texto del Objetivo 1',
+    title: 'FIN DE LA POBREZA',
+    info: '',
   },
   {
-    title: 'Objetivo2',
-    subtitle: 'Texto del Objetivo 2',
+    title: 'HAMBRE CERO',
+    info: '',
   },
   {
     title: 'Objetivo3',
-    subtitle: 'Texto del Objetivo 3',
+    info: '',
   },
   {
     title: 'Objetivo4',
-    subtitle: 'Texto del Objetivo 4',
+  },
+  {
+    title: 'Objetivo5',
+  },
+  {
+    title: 'Objetivo6',
+  },
+  {
+    title: 'Objetivo7',
+  },
+  {
+    title: 'Objetivo8',
   },
 ];
 
@@ -30,7 +41,6 @@ const App = () => (
         <Grid item xs={6}>
           <SquareCard
             title={objective.title}
-            subtitle={objective.subtitle}
           />
         </Grid>
       ))}

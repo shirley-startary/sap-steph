@@ -7,6 +7,16 @@ const LatinCodeWeek = () => (
     <NavigationBar />
     <RectangularCard />
     COmponente de Cards rectangulares
+    <style jsx global>
+      {`
+        body {
+          margin: 0;
+        font-family: system-ui;
+        background: white;
+        }
+        
+      `}
+    </style>
   </div>
 );
 
