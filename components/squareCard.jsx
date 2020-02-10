@@ -39,7 +39,7 @@ const SquareCard = (props) => {
     >
       <CardContent className={classes.description}>
         <Typography variant="body1" gutterBottom>
-          <Link href="/info">
+          <Link href="/info-objective">
             <a>
               { title }
             </a>

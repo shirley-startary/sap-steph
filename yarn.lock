@@ -1904,7 +1904,7 @@ babel-plugin-transform-react-remove-prop-types@0.4.24:
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.24.tgz#f2edaf9b4c6a5fbe5c1d678bfb531078c1555f3a"
   integrity sha512-eqj0hVcJUR57/Ug2zE1Yswsw4LhuqqHhD+8v120T1cl3kjg76QwtyBrdIk4WVwK+lAhBJVYCd/v+4nc4y+8JsA==
 
-babel-runtime@^6.26.0:
+babel-runtime@^6.11.6, babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -6561,6 +6561,13 @@ react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.1:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
+
+react-splash@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-splash/-/react-splash-0.1.0.tgz#363f1f7be9b3816e7dc9c3bb9bef91927fca7879"
+  integrity sha1-Nj8fe+mzgW59ycO7m++Rkn/KeHk=
+  dependencies:
+    babel-runtime "^6.11.6"
 
 react-transition-group@^4.3.0:
   version "4.3.0"
