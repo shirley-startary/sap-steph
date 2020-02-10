@@ -11,8 +11,8 @@ const LatinCodeWeek = () => (
       {`
         body {
           margin: 0;
-        font-family: system-ui;
-        background: white;
+          font-family: system-ui;
+          background: white;
         }
         
       `}

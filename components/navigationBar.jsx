@@ -33,7 +33,7 @@ const NavigationBar = () => (
             </Link>
           </li>
           <li>
-            <Link href="/ONGs">
+            <Link href="/organizations">
               <a>
                 <i>⌁</i>
                 ONGs
