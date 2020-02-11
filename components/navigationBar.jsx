@@ -6,8 +6,6 @@ import graphic from '../images/icons/graphic1.png';
 import agreement from '../images/icons/agreement1.png';
 import dataLogo from '../images/icons/logoLCW.png';
 
-
-
 const NavigationBar = () => (
   <>
     <header>
