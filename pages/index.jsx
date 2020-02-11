@@ -12,6 +12,7 @@ const App = () => (
         <Grid item xs={6}>
           <SquareCard
             title={objective.title}
+            url={objective.url}
           />
         </Grid>
       ))}
