@@ -9,10 +9,6 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
-import NavigationBar from '../components/navigationBar';
-import RectangularCard from '../components/rectangularCard';
-import dataProyectos from '../data/latinCodeWeek';
-import Carousel from '../components/carousel';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
@@ -45,7 +41,7 @@ const tutorialSteps = [
 
 const useStyles = makeStyles(theme => ({
   root: {
-    maxWidth: 400,
+    maxWidth: 1090,
     flexGrow: 1,
     paddingTop: '110px',
   },
@@ -57,15 +53,15 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.default,
   },
   img: {
-    height: 255,
     display: 'block',
-    maxWidth: 400,
+    maxWidth: 1090,
     overflow: 'hidden',
     width: '100%',
   },
 }));
 
-const LatinCodeWeek = () => {
+
+const Carousel = () => {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
@@ -84,46 +80,45 @@ const LatinCodeWeek = () => {
   };
 
   return (
-    <div>
-      <NavigationBar />
-      <div className="position">
-        <div>
-          <img src="https://dummyimage.com/vga" className="imagePresentation" alt="dummy" />
-        </div>
-        <div>
-          <p>
-            Latin Code Week acerca a los jóvenes a las carreras de ciencia, tecnología,
-            ingeniería y matemáticas (STEM), para convertirse en la fuerza laboral de los
-            empleos del futuro. Más de 5,000 jóvenes han sido impactados gracias a este programa.
-          </p>
-        </div>
-        <Carousel/>
+    <div className={classes.root}>
+      <Paper square elevation={0} className={classes.header}>
+        <Typography>{tutorialSteps[activeStep].label}</Typography>
+      </Paper>
+      <AutoPlaySwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={activeStep}
+        onChangeIndex={handleStepChange}
+        enableMouseEvents
+      >
+        {tutorialSteps.map((step, index) => (
+          <div key={step.label}>
+            {Math.abs(activeStep - index) <= 2 ? (
+              <img className={classes.img} src={step.imgPath} alt={step.label} />
+            ) : null}
+          </div>
+        ))}
+      </AutoPlaySwipeableViews>
+      <MobileStepper
+        steps={maxSteps}
+        position="static"
+        variant="text"
+        activeStep={activeStep}
+        nextButton={(
+          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+            Next
+            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+          </Button>
+        )}
+        backButton={(
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+          Back
+          </Button>
+        )}
+      />
 
-        <section>
-          {dataProyectos.map(item => (
-            <RectangularCard
-              thumbnail=""
-              title={item.title}
-              subtitle={item.subtitulo}
-            />
-          ))}
-        </section>
-         
-      </div>
-
-      <style jsx global>
+      <style jsx>
         {`
-        body {
-          margin: 0;
-          font-family: system-ui;
-          background: white;
-        }
-        img.imagePresentation {
-          width:100%;
-        }
-        .position {
-          padding-top:100px;
-        }
         
       `}
       </style>
@@ -131,4 +126,4 @@ const LatinCodeWeek = () => {
   );
 };
 
-export default LatinCodeWeek;
+export default Carousel;
