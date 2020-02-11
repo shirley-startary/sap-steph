@@ -11,7 +11,7 @@ const NavigationBar = () => (
           <li>
             <Link href="/">
               <a>
-                <i>⌁</i>
+                <i><img src="/static/goal.png" alt="goal"/></i>
                 Objetivos
               </a>
             </Link>
@@ -68,7 +68,7 @@ const NavigationBar = () => (
         }
         .menu ul li {
           display: inline-block;
-          font-size: 10px;
+          font-size: 14px;
           margin: 5px;
           cursor: pointer;
         }
