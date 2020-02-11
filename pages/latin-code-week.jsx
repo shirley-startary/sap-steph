@@ -52,6 +52,7 @@ const LatinCodeWeek = () => {
         
       </section>
     </div>
+
     <style jsx global>
       {`
         body {
@@ -70,5 +71,6 @@ const LatinCodeWeek = () => {
     </style>
   </div>)
 };
+
 
 export default LatinCodeWeek;
