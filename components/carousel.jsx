@@ -57,6 +57,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 1090,
     overflow: 'hidden',
     width: '100%',
+    margin: '0 auto',
   },
 }));
 
@@ -80,7 +81,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className={classes.root}>
+    <div id="carousel" className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
         <Typography>{tutorialSteps[activeStep].label}</Typography>
       </Paper>
@@ -98,28 +99,13 @@ const Carousel = () => {
           </div>
         ))}
       </AutoPlaySwipeableViews>
-      <MobileStepper
-        steps={maxSteps}
-        position="static"
-        variant="text"
-        activeStep={activeStep}
-        nextButton={(
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-            Next
-            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-          </Button>
-        )}
-        backButton={(
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-          Back
-          </Button>
-        )}
-      />
+    
 
       <style jsx>
         {`
-        
+        #carousel {
+          margin:0 auto;
+        }
       `}
       </style>
     </div>
