@@ -5,7 +5,7 @@ import RectangularCard from '../components/rectangularCard';
 const LatinCodeWeek = () => (
   <div>
     <NavigationBar />
-    <RectangularCard />
+    <RectangularCard  />
     COmponente de Cards rectangulares
     <style jsx global>
       {`
