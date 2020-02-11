@@ -2,11 +2,12 @@ import React from 'react';
 import NavigationBar from '../components/navigationBar';
 import RectangularCard from '../components/rectangularCard';
 
-const LatinCodeWeek = () => (
+const Programs = () => (
   <div>
     <NavigationBar />
-    <RectangularCard />
-    COmponente de Cards rectangulares
+    <div className='position'>
+      Programs
+    </div>
     <style jsx global>
       {`
         body {
@@ -14,10 +15,12 @@ const LatinCodeWeek = () => (
           font-family: system-ui;
           background: white;
         }
-        
+        .position {
+          padding: 100px;
+        }
       `}
     </style>
   </div>
 );
 
-export default LatinCodeWeek;
+export default Programs;

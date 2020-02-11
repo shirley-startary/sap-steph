@@ -7,20 +7,25 @@ import objectives from '../data/objectives';
 const InfoObjective = () => (
   <div>
     <NavigationBar />
-    <RectangularCard
-      title={objectives.title}
-      thumbnail={objectives.thumbnail}
-      subtitle={objectives.subtitle}
-      action={<CustomizedDialogs />}
-    />
+    <div className="position">
+      <RectangularCard
+        title={objectives.title}
+        thumbnail={objectives.thumbnail}
+        subtitle={objectives.subtitle}
+        action={<CustomizedDialogs />}
+      />
+
+    </div>
     <style jsx global>
       {`
         body {
-          margin: 0;
+        margin: 0;
         font-family: system-ui;
         background: white;
         }
-        
+        .position {
+          padding-top:100px;
+        }
       `}
     </style>
   </div>

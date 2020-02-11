@@ -7,16 +7,18 @@ import objectives from '../data/objectives';
 const App = () => (
   <div>
     <NavigationBar />
-    <Grid container spacing={4}>
-      {objectives.map(objective => (
-        <Grid item xs={6}>
-          <SquareCard
-            title={objective.title}
-            url={objective.url}
-          />
-        </Grid>
-      ))}
-    </Grid>
+    <div className="position">
+      <Grid container spacing={4}>
+        {objectives.map(objective => (
+          <Grid item xs={6}>
+            <SquareCard
+              title={objective.title}
+              url={objective.url}
+            />
+          </Grid>
+        ))}
+      </Grid>
+    </div>
     <style jsx global>
       {`
         body {
@@ -24,7 +26,9 @@ const App = () => (
         font-family: system-ui;
         background: white;
         }
-        
+        .position {
+          padding-top: 110px;
+        }
       `}
     </style>
   </div>

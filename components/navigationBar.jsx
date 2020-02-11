@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Link from 'next/link';
-import goal from '../images/goal.png';
-import graphic from '../images/graphic.png';
-import agreement from '../images/agreement.png';
-import dataLogo from '../images/code.png';
+import goal from '../images/icons/goal.png';
+import graphic from '../images/icons/graphic.png';
+import agreement from '../images/icons/agreement.png';
+import dataLogo from '../images/icons/code.png';
 
 
 
@@ -51,6 +51,9 @@ const NavigationBar = () => (
 
     <style jsx>{`
       header {
+        width: 100%;
+        position: fixed;
+        z-index: 100;
         color: #fff;
         background: #04A7E7;
         padding:  15px 0px 10px 0px ;
