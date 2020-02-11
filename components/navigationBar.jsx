@@ -1,12 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Link from 'next/link';
-import goal from '../images/icons/goal.png';
-import graphic from '../images/icons/graphic.png';
-import agreement from '../images/icons/agreement.png';
-import dataLogo from '../images/icons/code.png';
-
-
+import goal from '../images/icons/goal1.png';
+import graphic from '../images/icons/graphic1.png';
+import agreement from '../images/icons/agreement1.png';
+import dataLogo from '../images/icons/logoLCW.png';
 
 const NavigationBar = () => (
   <>
@@ -58,13 +56,14 @@ const NavigationBar = () => (
         background: #04A7E7;
         padding:  15px 0px 10px 0px ;
         text-align: center;
+        height:70px;
       }
       .menu ul {
         display:flex;
         justify-content: space-around;
         list-style: none;
         margin: 0;
-        padding:  10px 0 0 0;
+        padding: 0 0 0 0;
       }
       .menu ul li {
         display: inline-block;

@@ -18,11 +18,16 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     padding: 24,
+    maxWidth: 1090,
+    margin: '0 auto',
   },
   thumbnail: {
     height: 62,
     position: 'relative',
     width: 62,
+  },
+  imagesCard: {
+    width:62
   },
   description: {
     flexGrow: 1,
@@ -48,7 +53,8 @@ const RectangularCard = (props) => {
       className={classes.card}
     >
       <div className={classes.thumbnail}>
-        {thumbnail}
+        {/* {thumbnail} */}
+        <img className={classes.imagesCard} src={thumbnail} alt={thumbnail}/>
       </div>
 
       <CardContent className={classes.description}>
@@ -63,7 +69,11 @@ const RectangularCard = (props) => {
       <CardActions disableActionSpacing>
         { action }
       </CardActions>
-
+      <style jsx>{`
+        div img {
+          width:100%;
+        }
+      `}</style>
     </Card>
   );
 };
