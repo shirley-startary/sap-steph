@@ -20,7 +20,7 @@ const LatinCodeWeek = () => {
             empleos del futuro. Más de 5,000 jóvenes han sido impactados gracias a este programa.
           </p>
         </div>
-        <Carousel data={dataProyectos}/>
+        <Carousel data={dataProyectos.dataSlides}/>
         <section>
           {dataProyectos.data.map(item => (
             <RectangularCard
