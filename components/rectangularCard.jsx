@@ -8,7 +8,6 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { createMuiTheme } from '@material-ui/core/styles';
 
-
 const color = {
   '1': '#eb1c2d',
   '2': '#D3A029',
@@ -62,28 +61,19 @@ const styles = {
     paddingBottom: 0,
     paddingTop: 0,
     position:'relative',
-
   },
   objective: {
-    // position:'relative',
     position: 'absolute', 
     botton:0, 
     right:0,
-    // margin: '10px auto 10px',
   },
   span: {
     display: 'inline-block',
     fontSize:15,
     padding: 5,
-    // margin: '5,
-    // position: 'absolute', 
-    // top:0, 
-    // right:10,
-    // position:'relative', 
     margin: '10px 0 0 10px',
     backgroundColor:'#eb1c2d',
     border: '1px solid',
-    // textAlign: 'center',
     right: 50,
     
   }
