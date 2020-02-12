@@ -1,9 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Link from 'next/link';
-import goal from '../images/icons/goal1.png';
-import graphic from '../images/icons/graphic1.png';
-import agreement from '../images/icons/agreement1.png';
 import dataLogo from '../images/icons/logoLCW.png';
 
 const NavigationBar = () => (
@@ -14,7 +11,7 @@ const NavigationBar = () => (
           <li>
             <Link href="/">
               <a>
-                <i><img src={goal} alt="goal"/></i>
+                <i><img src="https://user-images.githubusercontent.com/25916511/74312032-6e296200-4d36-11ea-8151-b6ff3e941d66.png" alt="objectives" /></i>
                 Objetivos
               </a>
             </Link>
@@ -22,7 +19,7 @@ const NavigationBar = () => (
           <li>
             <Link href="/organizations">
               <a>
-                <i><img src={agreement} alt="agreement"/></i>
+                <i><img src="https://user-images.githubusercontent.com/25916511/74312447-54d4e580-4d37-11ea-80e5-6ae18e2e082f.png" alt="ongs" /></i>
                 ONGs
               </a>
             </Link>
@@ -30,7 +27,7 @@ const NavigationBar = () => (
           <li>
             <Link href="/latin-code-week">
               <a>
-              <i><img src={dataLogo} alt="data logo"/></i>
+                <i><img src={dataLogo} alt="data logo" /></i>
                 Latin Code Week
               </a>
             </Link>
@@ -38,7 +35,7 @@ const NavigationBar = () => (
           <li>
             <Link href="/graphics">
               <a>
-                <i><img src={graphic} alt="graphic"/></i>
+                <i><img src="https://user-images.githubusercontent.com/25916511/74312740-d88ed200-4d37-11ea-8cfd-01b4d31e7074.png" alt="graphic" /></i>
                 Gráficas
               </a>
             </Link>
@@ -47,7 +44,8 @@ const NavigationBar = () => (
       </nav>
     </header>
 
-    <style jsx>{`
+    <style jsx>
+      {`
       header {
         width: 100%;
         position: fixed;
@@ -83,9 +81,9 @@ const NavigationBar = () => (
       i img {
         width: 40px;  
         height: 40px;
-      }
-        
-    `}</style>
+      }    
+    `}
+    </style>
   </>
 );
 
