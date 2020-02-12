@@ -62,7 +62,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const Carousel = () => {
+const Carousel = (props) => {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
@@ -99,7 +99,24 @@ const Carousel = () => {
           </div>
         ))}
       </AutoPlaySwipeableViews>
-
+      {/* <MobileStepper
+        steps={maxSteps}
+        position="static"
+        variant="text"
+        activeStep={activeStep}
+        nextButton={(
+          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+            Next
+            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+          </Button>
+        )}
+        backButton={(
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+          Back
+          </Button>
+        )}
+      /> */}
 
       <style jsx>
         {`

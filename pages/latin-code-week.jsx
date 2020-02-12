@@ -10,7 +10,7 @@ const LatinCodeWeek = () => {
     <div>
       <NavigationBar />
       <div className="position">
-        <div>
+        <div className="">
           <img src={dataProyectos.imagePresentation} className="imagePresentation" alt="dummy" />
         </div>
         <div className="infoPrincipal">
@@ -20,7 +20,7 @@ const LatinCodeWeek = () => {
             empleos del futuro. Más de 5,000 jóvenes han sido impactados gracias a este programa.
           </p>
         </div>
-        <Carousel/>
+        <Carousel data={dataProyectos}/>
         <section>
           {dataProyectos.data.map(item => (
             <RectangularCard
@@ -45,9 +45,11 @@ const LatinCodeWeek = () => {
         }
         .position {
           padding-top:95px;
+          max-width:1090px;
+          margin: 0 auto;
+
         }
         .infoPrincipal {
-          max-width:1090px;
           height: 50vh;
           margin: 0 auto;
         }
