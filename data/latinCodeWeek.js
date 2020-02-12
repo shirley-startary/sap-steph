@@ -62,7 +62,6 @@ const dataProyectos = {
       subtitulo: 'Pulsera para la seguridad de mujeres. Reto: Ciudades inteligentes ',
       thumbnail: 'https://user-images.githubusercontent.com/25912292/74345406-b024c900-4d73-11ea-82d2-2569ee2cb293.JPG',
       objective: ['Objetivo 3 Salud y Bienestar ', 'Objetivo 9 Industria, Innovación e Infraestructura'],
-
     },
     {
       title: 'Security way',

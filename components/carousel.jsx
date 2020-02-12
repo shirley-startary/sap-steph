@@ -59,6 +59,7 @@ const Carousel = (props) => {
       {/* <Paper square elevation={0} className={classes.header}> */}
         {/* <Typography>{data[activeStep].label}</Typography> */}
       {/* </Paper> */}
+
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -77,24 +78,6 @@ const Carousel = (props) => {
         ))}
       </AutoPlaySwipeableViews>
       <MobileStepper
-        steps={maxSteps}
-        position="static"
-        variant="text"
-        activeStep={activeStep}
-        nextButton={(
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-            Next
-            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-          </Button>
-        )}
-        backButton={(
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-          Back
-          </Button>
-        )}
-      />
-
       <style jsx>
         {`
         #carousel {
