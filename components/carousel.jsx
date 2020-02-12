@@ -99,7 +99,7 @@ const Carousel = () => {
           </div>
         ))}
       </AutoPlaySwipeableViews>
-    
+
 
       <style jsx>
         {`
