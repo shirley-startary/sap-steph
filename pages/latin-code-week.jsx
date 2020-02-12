@@ -10,19 +10,19 @@ const LatinCodeWeek = () => {
     <div>
       <NavigationBar />
       <div className="position">
-        <div>
-          <img src="" className="imagePresentation" alt="dummy" />
+        <div className="">
+          <img src={dataProyectos.imagePresentation} className="imagePresentation" alt="dummy" />
         </div>
-        <div>
+        <div className="infoPrincipal">
           <p>
             Latin Code Week acerca a los jóvenes a las carreras de ciencia, tecnología,
             ingeniería y matemáticas (STEM), para convertirse en la fuerza laboral de los
             empleos del futuro. Más de 5,000 jóvenes han sido impactados gracias a este programa.
           </p>
         </div>
-        <Carousel/>
+        <Carousel data={dataProyectos.dataSlides}/>
         <section>
-          {dataProyectos.map(item => (
+          {dataProyectos.data.map(item => (
             <RectangularCard
               thumbnail={item.thumbnail}
               title={item.title}
@@ -44,9 +44,24 @@ const LatinCodeWeek = () => {
           width:100%;
         }
         .position {
-          padding-top:100px;
+          padding-top:95px;
+          max-width:1090px;
+          margin: 0 auto;
+
         }
-        
+        .infoPrincipal {
+          height: 50vh;
+          margin: 0 auto;
+        }
+        .infoPrincipal p {
+          text-align: center;
+          font-size: 20px;
+          padding-top: 30px;
+          padding: 10px
+        }
+        .infoPrincipal img {
+          margin: 0 auto;
+        }
       `}
       </style>
     </div>

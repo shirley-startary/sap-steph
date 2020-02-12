@@ -15,3 +15,5 @@ lang/.messages
 
 # logs/*
 yarn-error.log
+
+.now

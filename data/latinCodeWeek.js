@@ -1,29 +1,59 @@
-const dataProyectos = [
-  {
-    title: 'Fomentar el ahorro',
-    subtitulo: 'One family:Aplicación familiar donde se plantean una meta de ahorro',
-    thumbnail: 'https://westeurope1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fsap-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!U8RfelMKg02zZJOpr7ZfnwnsbOwAjnpBti8wO2dArLu6p4XqHg-3RoktAVpOK1zr%2Fitems%2F01QKJ2NS7ANNT65LMNERBZH4N5NFNJSKMS%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvc2FwLW15LnNoYXJlcG9pbnQuY29tQDQyZjc2NzZjLWY0NTUtNDIzYy04MmY2LWRjMmQ5OTc5MWFmNyIsImlzcyI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMCIsIm5iZiI6IjE1ODE0Mzg2NjAiLCJleHAiOiIxNTgxNDYwMjYwIiwiZW5kcG9pbnR1cmwiOiI3NVBZSDVGRkV4dCs5aURWZjFSZDF0Z05VakNGcG1UaStTaDA4MUdaZ3U4PSIsImVuZHBvaW50dXJsTGVuZ3RoIjoiMTEzIiwiaXNsb29wYmFjayI6IlRydWUiLCJjaWQiOiJNMk0zTkRNME9XWXRNVEEyWmkweU1EQXdMVFkyTWpndFlUTmpZakZpTmpWbE1qQmoiLCJ2ZXIiOiJoYXNoZWRwcm9vZnRva2VuIiwic2l0ZWlkIjoiTjJFMVptTTBOVE10TUdFMU15MDBaRGd6TFdJek5qUXRPVE5oT1dGbVlqWTFaamxtIiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfHVybiUzYXNwbyUzYWFub24jODA1NmUzZWUwYmNkZDAyMDU2Mjg2NmRhZjcwZmZlZmYwNGVjMzZlZDY4NzU4Njc3ZTQ5OTgxOGYyM2MzMDlkZCIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfHVybiUzYXNwbyUzYWFub24jODA1NmUzZWUwYmNkZDAyMDU2Mjg2NmRhZjcwZmZlZmYwNGVjMzZlZDY4NzU4Njc3ZTQ5OTgxOGYyM2MzMDlkZCIsInNoYXJpbmdpZCI6ImsyUWx2RHVqaVVXeDlzRG1xT0RBb1EiLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMiJ9.bm5vdklCby9uQ0o5T3VaSldZU3ZLYTBocjNUM0pZeFZQOEg1Yzh0YUNuZz0&encodeFailures=1&srcWidth=&srcHeight=&width=842&height=558&action=Access',
-    Objective: ['Objetivo 8 Trabajo decente y crecimiento económico'],
-  },
-  {
-    title: 'Mejorar la Calidad de la Educación en México',
-    subtitulo: 'Uni App: aplicación que brinda opciones de educación universitaria con becas, programas e intercambios.',
-    thumbnail: 'https://westeurope1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fsap-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!U8RfelMKg02zZJOpr7ZfnwnsbOwAjnpBti8wO2dArLu6p4XqHg-3RoktAVpOK1zr%2Fitems%2F01QKJ2NS7ANNT65LMNERBZH4N5NFNJSKMS%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvc2FwLW15LnNoYXJlcG9pbnQuY29tQDQyZjc2NzZjLWY0NTUtNDIzYy04MmY2LWRjMmQ5OTc5MWFmNyIsImlzcyI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMCIsIm5iZiI6IjE1ODE0Mzg2NjAiLCJleHAiOiIxNTgxNDYwMjYwIiwiZW5kcG9pbnR1cmwiOiI3NVBZSDVGRkV4dCs5aURWZjFSZDF0Z05VakNGcG1UaStTaDA4MUdaZ3U4PSIsImVuZHBvaW50dXJsTGVuZ3RoIjoiMTEzIiwiaXNsb29wYmFjayI6IlRydWUiLCJjaWQiOiJNMk0zTkRNME9XWXRNVEEyWmkweU1EQXdMVFkyTWpndFlUTmpZakZpTmpWbE1qQmoiLCJ2ZXIiOiJoYXNoZWRwcm9vZnRva2VuIiwic2l0ZWlkIjoiTjJFMVptTTBOVE10TUdFMU15MDBaRGd6TFdJek5qUXRPVE5oT1dGbVlqWTFaamxtIiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfHVybiUzYXNwbyUzYWFub24jODA1NmUzZWUwYmNkZDAyMDU2Mjg2NmRhZjcwZmZlZmYwNGVjMzZlZDY4NzU4Njc3ZTQ5OTgxOGYyM2MzMDlkZCIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfHVybiUzYXNwbyUzYWFub24jODA1NmUzZWUwYmNkZDAyMDU2Mjg2NmRhZjcwZmZlZmYwNGVjMzZlZDY4NzU4Njc3ZTQ5OTgxOGYyM2MzMDlkZCIsInNoYXJpbmdpZCI6ImsyUWx2RHVqaVVXeDlzRG1xT0RBb1EiLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMiJ9.bm5vdklCby9uQ0o5T3VaSldZU3ZLYTBocjNUM0pZeFZQOEg1Yzh0YUNuZz0&encodeFailures=1&srcWidth=&srcHeight=&width=842&height=558&action=Access',
-    Objective: ['Objetivo 4 Educación de Calidad'],
-  },
-  {
-    title: 'Ciudades inteligentes',
-    subtitulo: 'Girly Protect: pulsera para la seguridad de mujeres. ',
-    thumbnail: 'https://westeurope1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fsap-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!U8RfelMKg02zZJOpr7ZfnwnsbOwAjnpBti8wO2dArLu6p4XqHg-3RoktAVpOK1zr%2Fitems%2F01QKJ2NS7ANNT65LMNERBZH4N5NFNJSKMS%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvc2FwLW15LnNoYXJlcG9pbnQuY29tQDQyZjc2NzZjLWY0NTUtNDIzYy04MmY2LWRjMmQ5OTc5MWFmNyIsImlzcyI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMCIsIm5iZiI6IjE1ODE0Mzg2NjAiLCJleHAiOiIxNTgxNDYwMjYwIiwiZW5kcG9pbnR1cmwiOiI3NVBZSDVGRkV4dCs5aURWZjFSZDF0Z05VakNGcG1UaStTaDA4MUdaZ3U4PSIsImVuZHBvaW50dXJsTGVuZ3RoIjoiMTEzIiwiaXNsb29wYmFjayI6IlRydWUiLCJjaWQiOiJNMk0zTkRNME9XWXRNVEEyWmkweU1EQXdMVFkyTWpndFlUTmpZakZpTmpWbE1qQmoiLCJ2ZXIiOiJoYXNoZWRwcm9vZnRva2VuIiwic2l0ZWlkIjoiTjJFMVptTTBOVE10TUdFMU15MDBaRGd6TFdJek5qUXRPVE5oT1dGbVlqWTFaamxtIiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfHVybiUzYXNwbyUzYWFub24jODA1NmUzZWUwYmNkZDAyMDU2Mjg2NmRhZjcwZmZlZmYwNGVjMzZlZDY4NzU4Njc3ZTQ5OTgxOGYyM2MzMDlkZCIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfHVybiUzYXNwbyUzYWFub24jODA1NmUzZWUwYmNkZDAyMDU2Mjg2NmRhZjcwZmZlZmYwNGVjMzZlZDY4NzU4Njc3ZTQ5OTgxOGYyM2MzMDlkZCIsInNoYXJpbmdpZCI6ImsyUWx2RHVqaVVXeDlzRG1xT0RBb1EiLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMiJ9.bm5vdklCby9uQ0o5T3VaSldZU3ZLYTBocjNUM0pZeFZQOEg1Yzh0YUNuZz0&encodeFailures=1&srcWidth=&srcHeight=&width=842&height=558&action=Access',
-    Objective: ['Objetivo 3 Salud y Bienestar ', 'Objetivo 9 Industria, Innovación e Infraestructura'],
+const dataProyectos = {
+  'imagePresentation':'https://dummyimage.com/600x400/000/fff',
 
-  },
-  {
-    title: 'Deserción escolar',
-    subtitulo: 'Security way: transporte seguro y accesible para traslado de estudiantes.',
-    thumbnail: 'https://westeurope1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fsap-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!U8RfelMKg02zZJOpr7ZfnwnsbOwAjnpBti8wO2dArLu6p4XqHg-3RoktAVpOK1zr%2Fitems%2F01QKJ2NS7ANNT65LMNERBZH4N5NFNJSKMS%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvc2FwLW15LnNoYXJlcG9pbnQuY29tQDQyZjc2NzZjLWY0NTUtNDIzYy04MmY2LWRjMmQ5OTc5MWFmNyIsImlzcyI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMCIsIm5iZiI6IjE1ODE0Mzg2NjAiLCJleHAiOiIxNTgxNDYwMjYwIiwiZW5kcG9pbnR1cmwiOiI3NVBZSDVGRkV4dCs5aURWZjFSZDF0Z05VakNGcG1UaStTaDA4MUdaZ3U4PSIsImVuZHBvaW50dXJsTGVuZ3RoIjoiMTEzIiwiaXNsb29wYmFjayI6IlRydWUiLCJjaWQiOiJNMk0zTkRNME9XWXRNVEEyWmkweU1EQXdMVFkyTWpndFlUTmpZakZpTmpWbE1qQmoiLCJ2ZXIiOiJoYXNoZWRwcm9vZnRva2VuIiwic2l0ZWlkIjoiTjJFMVptTTBOVE10TUdFMU15MDBaRGd6TFdJek5qUXRPVE5oT1dGbVlqWTFaamxtIiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfHVybiUzYXNwbyUzYWFub24jODA1NmUzZWUwYmNkZDAyMDU2Mjg2NmRhZjcwZmZlZmYwNGVjMzZlZDY4NzU4Njc3ZTQ5OTgxOGYyM2MzMDlkZCIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfHVybiUzYXNwbyUzYWFub24jODA1NmUzZWUwYmNkZDAyMDU2Mjg2NmRhZjcwZmZlZmYwNGVjMzZlZDY4NzU4Njc3ZTQ5OTgxOGYyM2MzMDlkZCIsInNoYXJpbmdpZCI6ImsyUWx2RHVqaVVXeDlzRG1xT0RBb1EiLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMiJ9.bm5vdklCby9uQ0o5T3VaSldZU3ZLYTBocjNUM0pZeFZQOEg1Yzh0YUNuZz0&encodeFailures=1&srcWidth=&srcHeight=&width=842&height=558&action=Access',
-    Objective: ['Objetivo 11 Ciudades y Comunidades Sostenibles', 'Objetivo 4 Educación de Calidad'],
-  },
-];
+  'dataSlides':[
+    {
+      label: 'San Francisco – Oakland Bay Bridge, United States',
+      imgPath:
+        'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+    },
+    {
+      label: 'Bird',
+      imgPath:
+        'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+    },
+    {
+      label: 'Bali, Indonesia',
+      imgPath:
+        'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+    },
+    {
+      label: 'NeONBRAND Digital Marketing, Las Vegas, United States',
+      imgPath:
+        'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
+    },
+    {
+      label: 'Goč, Serbia',
+      imgPath:
+        'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+    },
+  ],
+  'data':[
+    {
+      title: 'Fomentar el ahorro',
+      subtitulo: 'One family:Aplicación familiar donde se plantean una meta de ahorro',
+      thumbnail: 'https://dummyimage.com/600x400/000/fff',
+      Objective: ['Objetivo 8 Trabajo decente y crecimiento económico'],
+    },
+    {
+      title: 'Mejorar la Calidad de la Educación en México',
+      subtitulo: 'Uni App: aplicación que brinda opciones de educación universitaria con becas, programas e intercambios.',
+      thumbnail: 'https://dummyimage.com/600x400/000/fff',
+      Objective: ['Objetivo 4 Educación de Calidad'],
+    },
+    {
+      title: 'Ciudades inteligentes',
+      subtitulo: 'Girly Protect: pulsera para la seguridad de mujeres. ',
+      thumbnail: 'https://dummyimage.com/600x400/000/fff',
+      Objective: ['Objetivo 3 Salud y Bienestar ', 'Objetivo 9 Industria, Innovación e Infraestructura'],
 
+    },
+    {
+      title: 'Deserción escolar',
+      subtitulo: 'Security way: transporte seguro y accesible para traslado de estudiantes.',
+      thumbnail: 'https://dummyimage.com/600x400/000/fff',
+      Objective: ['Objetivo 11 Ciudades y Comunidades Sostenibles', 'Objetivo 4 Educación de Calidad'],
+    },
+  ]
+}
 export default dataProyectos;
