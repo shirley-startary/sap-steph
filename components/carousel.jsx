@@ -56,9 +56,10 @@ const Carousel = (props) => {
 
   return (
     <div id="carousel" className={classes.root}>
-      <Paper square elevation={0} className={classes.header}>
-        <Typography>{data[activeStep].label}</Typography>
-      </Paper>
+      {/* <Paper square elevation={0} className={classes.header}> */}
+        {/* <Typography>{data[activeStep].label}</Typography> */}
+      {/* </Paper> */}
+
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -68,30 +69,15 @@ const Carousel = (props) => {
         {data.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
+              <div>
+               <Typography>{data[activeStep].label}</Typography>
               <img className={classes.img} src={step.imgPath} alt={step.label} />
+              </div>
             ) : null}
           </div>
         ))}
       </AutoPlaySwipeableViews>
-      {/* <MobileStepper
-        steps={maxSteps}
-        position="static"
-        variant="text"
-        activeStep={activeStep}
-        nextButton={(
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-            Next
-            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-          </Button>
-        )}
-        backButton={(
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-          Back
-          </Button>
-        )}
-      /> */}
-
+      <MobileStepper
       <style jsx>
         {`
         #carousel {
