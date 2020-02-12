@@ -56,9 +56,9 @@ const Carousel = (props) => {
 
   return (
     <div id="carousel" className={classes.root}>
-      <Paper square elevation={0} className={classes.header}>
-        <Typography>{data[activeStep].label}</Typography>
-      </Paper>
+      {/* <Paper square elevation={0} className={classes.header}> */}
+        {/* <Typography>{data[activeStep].label}</Typography> */}
+      {/* </Paper> */}
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -68,12 +68,15 @@ const Carousel = (props) => {
         {data.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
+              <div>
+               <Typography>{data[activeStep].label}</Typography>
               <img className={classes.img} src={step.imgPath} alt={step.label} />
+              </div>
             ) : null}
           </div>
         ))}
       </AutoPlaySwipeableViews>
-      {/* <MobileStepper
+      <MobileStepper
         steps={maxSteps}
         position="static"
         variant="text"
@@ -90,7 +93,7 @@ const Carousel = (props) => {
           Back
           </Button>
         )}
-      /> */}
+      />
 
       <style jsx>
         {`
