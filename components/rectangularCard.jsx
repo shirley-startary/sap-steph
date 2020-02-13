@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import { createMuiTheme } from '@material-ui/core/styles';
 
 const color = {
   '1': '#eb1c2d',
@@ -35,27 +33,25 @@ const styles = {
       marginBottom: 0,
     },
   },
-  media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
-  },
+
   card: {
     display: 'flex',
     padding: 10,
     maxWidth: 1090,
-    margin: 'auto',
+    margin: '15px auto auto 15px',
     height: 150,
   },
 
   thumbnail: {
-    height: 70,
     position: 'relative',
-    width: 100,
+    height: 100,
+    width: '100px',
     margin: 10,
   },
   imagesCard: {
-    width:'100%'
+    width:'100px'
   },
+  
   description: {
     flexGrow: 1,
     paddingBottom: 0,
@@ -68,14 +64,14 @@ const styles = {
     right:0,
   },
   span: {
+    color: '#fff',
     display: 'inline-block',
     fontSize:15,
     padding: 5,
     margin: '10px 0 0 10px',
-    backgroundColor:'#eb1c2d',
     border: '1px solid',
+    borderRadius: 5,
     right: 50,
-    
   }
 };
 
@@ -86,7 +82,7 @@ const RectangularCard = (props) => {
     thumbnail,
     title,
     subtitle,
-    objective
+    objective = []
   } = props;
 
   return (
@@ -110,14 +106,11 @@ const RectangularCard = (props) => {
         <Typography variant="body1" className={classes.objective}>
           { objective.map(element => {
             return (
-                <span className={classes.span}>{element.split(" ")[1]}</span>
+                <span style={{backgroundColor:color[element.split(" ")[1]]}} className={classes.span}>{element.split(" ")[1]}</span>
                 )
             }) 
           }
         </Typography>
-        {/* <div className={classes.divObjective}> */}
-        {/* </div> */}
-        
       </CardContent>
 
       <CardActions disableActionSpacing>
@@ -136,7 +129,7 @@ RectangularCard.propTypes = {
   thumbnail: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
   title: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
   subtitle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
-  objective: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
+  objective: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 };
 
 export default withStyles(styles)(RectangularCard);

@@ -1,18 +1,25 @@
 import React from 'react';
 import NavigationBar from '../components/navigationBar';
-import RectangularCard from '../components/rectangularCard';
 
 const LatinCodeWeek = () => (
   <div>
     <NavigationBar />
-    <RectangularCard  />
-    COmponente de Cards rectangulares
+    <div className="position">
+
+      Componente de Cards rectangulares
+    </div>
     <style jsx global>
       {`
         body {
           margin: 0;
           font-family: system-ui;
           background: white;
+        }
+        .position {
+          padding-top:95px;
+          max-width:1090px;
+          margin: 0 auto;
+
         }
         
       `}
