@@ -3,6 +3,7 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import ReactGA from 'react-ga';
 import objectives from '../data/objectives';
 import NavigationBar from '../components/navigationBar';
 import CustomizedDialogs from '../components/modal';
@@ -10,6 +11,8 @@ import CustomizedDialogs from '../components/modal';
 
 export default class extends React.Component {
   static async getInitialProps({ query }) {
+    ReactGA.initialize('UA-158372514-1');
+    ReactGA.pageview(`/info-objective/?id=${parseInt(query.id, 10)}`);
     const objective = await objectives[parseInt(query.id, 10) - 1];
     return { objective };
   }
