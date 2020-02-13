@@ -303,7 +303,7 @@ export default [
       },
       {
         idPregunta:4,
-        pregunta:'1 de cada X adolescentes que sólo hablan una lengua indígena y no español asiste a la escuela en México',
+        pregunta:'1 de cada ____ adolescentes que sólo hablan una lengua indígena y no español asiste a la escuela en México',
         respuestas:[10,20,30,40],
         respuestaCorrecta:10,
         puntaje:30,
@@ -351,8 +351,6 @@ export default [
         puntaje:15,
       },
       {
-
- 
         idPregunta:4,
         pregunta:'¿Qué porcentaje de las aguas residuales se vierte en vías fluviales sin un tratamiento adecuado?',
         respuestas:[
@@ -628,7 +626,7 @@ export default [
         puntaje:40,
       }
     ] 
-  },
+  }, 
   {
     index: 11,
     title: 'CIUDADES Y COMUNIDADES SOSTENIBLES',
@@ -637,45 +635,60 @@ export default [
     trivia:[
       {
         idPregunta:1,
-        pregunta:'',
+        pregunta:'Las ciudades sostenibles son espacios con:',
         respuestas:[
-
+          'Oportunidades para todas las personas, acceso a servicios básicos, energía, vivienda, transporte y movilidad', 
+          'Movilidad para todas las personas independientemente de su edad',
+          'Servicios básicos y movilidad sin importar cómo impactamos al medio ambiente',
+          'Energía y vivienda para todos, no importa la planeación de espacios',
         ],
-        respuestaCorrecta:'',
+        respuestaCorrecta:'Oportunidades para todas las personas, acceso a servicios básicos, energía, vivienda, transporte y movilidad', 
         puntaje:10,
       },
       {
         idPregunta:2,
-        pregunta:'',
+        pregunta:'¿A cuánto ascenderá el número de personas que vivan en ciudades para 2030?',
         respuestas:[
-
+          '2,500 millones', 
+          '3,500 millones', 
+          '5,000 millones', 
+          '8,000 millones',
         ],
-        respuestaCorrecta:'',
+        respuestaCorrecta:'5,000 millones',
         puntaje:10,
       },
       {
         idPregunta:3,
-        pregunta:'',
+        pregunta:'Se necesita mejorar la planificación y la gestión de espacios urbanos del mundo para que sean:',
         respuestas:[
-
+          'Inclusivos, seguros y sostenibles',
+          'Resilientes y bonitos',
+          'Modernos, sostenibles y coloridos',
+          'Inclusivos, grandes y seguros',
         ],
-        respuestaCorrecta:'',
+        respuestaCorrecta:'Inclusivos, seguros y sostenibles',
         puntaje:15,
       },
       {
         idPregunta:4,
-        pregunta:'',
+        pregunta:'Los problemas comunes de las ciudades son:',
         respuestas:[
-
+          'Tránsito elevado, familias numerosas e infraestructura', 
+          'Tránsito elevado, falta de servicios básicos y políticas públicas e infraestructura',
+          'Infraestructura, telecomunicaciones y familias numerosas',
+          'Falta de servicios básicos solo en lugares marginados',
         ],
         respuestaCorrecta:'',
         puntaje:30,
       },
       {
         idPregunta:5,
-        pregunta:'',
+        pregunta:'Más de la mitad de la población urbana mundial estuvo expuesta a niveles de contaminación del aire al menos:',
         respuestas:[
-
+          '0 veces más altos al estándar',
+          '2 veces más altos que el estándar de seguridad',
+          '2.5 veces más altos que el estándar de seguridad'
+          '5 veces más altos que el estándar de seguridad',
         ],
         respuestaCorrecta:'',
         puntaje:40,
@@ -758,47 +771,62 @@ export default [
     trivia:[
       {
         idPregunta:1,
-        pregunta:'',
+        pregunta:'Las emisiones de gases de efecto invernadero continúan aumentando y hoy son X superior al nivel de 1990',
         respuestas:[
-
+          '50%', 
+          '30%', 
+          '15%', 
+          '3%',
         ],
-        respuestaCorrecta:'',
+        respuestaCorrecta:'50%',
         puntaje:5,
       },
       {
         idPregunta:2,
-        pregunta:'',
+        pregunta:'¿Qué porcentaje de las catástrofes naturales están relacionadas al cambio climático? ',
         respuestas:[
-
+          '0%',
+          '18%',
+          '59%',
+          '91%',
         ],
-        respuestaCorrecta:'',
+        respuestaCorrecta:'91%',
         puntaje:10,
       },
       {
         idPregunta:3,
-        pregunta:'',
+        pregunta:'Se estima que hasta 2017 los humanos habían causado un calentamiento global de: ',
         respuestas:[
-
+          '0°C por encima de los niveles preindustriales', 
+          '1°C por encima de los niveles preindustriales', 
+          '5°C por encima de los niveles preindustriales', 
+          '10°C por encima de los niveles preindustriales', 
         ],
-        respuestaCorrecta:'',
+        respuestaCorrecta:'1°C por encima de los niveles preindustriales',
         puntaje:15,
       },
       {
         idPregunta:4,
-        pregunta:'',
+        pregunta:'Para limitar el calentamiento a 1,5°C, las emisiones mundiales de CO2 deben disminuir:', 
         respuestas:[
-
+          '25% entre 2010 y 2030 y alcanzar el cero alrededor de 2050',
+          '35% entre 2010 y 2030 y alcanzar el cero alrededor de 2050',
+          '45% entre 2010 y 2030 y alcanzar el cero alrededor de 2050',
+          '95% entre 2010 y 2030 y alcanzar el cero alrededor de 2050',
         ],
-        respuestaCorrecta:'',
+        respuestaCorrecta: '45% entre 2010 y 2030 y alcanzar el cero alrededor de 2050',
         puntaje:30,
       },
       {
         idPregunta:5,
-        pregunta:'',
+        pregunta:'Solo el sector energético creará alrededor de más de ____ para 2030, enfocados específicamente en energía sostenible', 
         respuestas:[
-
+          '9 millones de puestos de trabajo', 
+          '18 millones de puestos de trabajo', 
+          '39 millones de puestos de trabajo', 
+          '45 millones de puestos de trabajo',
         ],
-        respuestaCorrecta:'',
+        respuestaCorrecta:'18 millones de puestos de trabajo', 
         puntaje:40,
       }
     ] 
