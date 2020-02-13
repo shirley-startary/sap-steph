@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Link from 'next/link';
-import dataLogo from '../images/icons/logoLCW.png';
 
 const NavigationBar = () => (
   <>
@@ -27,7 +26,7 @@ const NavigationBar = () => (
           <li>
             <Link href="/latin-code-week/">
               <a>
-                <i><img src={dataLogo} alt="data logo" /></i>
+                <i><img src="https://user-images.githubusercontent.com/25916511/74395118-1e00dd00-4dd4-11ea-830a-51778b8bd4bc.png" alt="data logo" /></i>
                 Latin Code Week
               </a>
             </Link>
