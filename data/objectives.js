@@ -687,7 +687,7 @@ export default [
         respuestas:[
           '0 veces más altos al estándar',
           '2 veces más altos que el estándar de seguridad',
-          '2.5 veces más altos que el estándar de seguridad'
+          '2.5 veces más altos que el estándar de seguridad',
           '5 veces más altos que el estándar de seguridad',
         ],
         respuestaCorrecta:'',
