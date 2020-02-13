@@ -27,18 +27,9 @@ const Trivia = (props) => {
     }, 
   ]);
   const handleChange = (event) => {
-    // console.log(event.target.value);
-    // console.log('index: ' + index);
-    // console.log('property name: '+ event.target.name.slice(8));
     let newArr = [...preguntas]; // copying the old datas array
-    // console.log(newArr[Number(event.target.name.slice(8))-1]);
     newArr[Number(event.target.name.slice(8)-1)][event.target.name] = event.target.value;
-    // newArr[event.target.name] = event.target.value; // replace e.target.value with whatever you want to change it to
-console.log(newArr, event.target.value);
-
-    // setDatas(newArr); 
     setPreguntas(newArr)
-    // setValue(event.target.value);
   };
 
   return (
@@ -50,20 +41,24 @@ console.log(newArr, event.target.value);
             <Typography className="title" variant="h4" gutterBottom>
               {objective.title}
             </Typography>
-            {objective.trivia.map(trivia => {
-              // console.log(trivia);
+            {objective.trivia.map((trivia, index) => {
               
            return (<Typography className="title" variant="h5" gutterBottom>
                 {trivia.pregunta}
-                    {trivia.respuestas.map(respuesta => (
+                    {trivia.respuestas.map((respuesta) => (
                   <FormControl component="fieldset">
-                    {/* <RadioGroup aria-label={`Pregunta${trivia.idPregunta}`} name={`Pregunta${trivia.idPregunta}`} value={preguntas[trivia.idPregunta][`Pregunta${trivia.idPregunta}`]} onChange={handleChange}> */}
-                    <RadioGroup
+                    <RadioGroup 
+                    aria-label={`Pregunta${trivia.idPregunta}`} 
+                    name={`Pregunta${trivia.idPregunta}`} 
+                    value={preguntas[index][`Pregunta${trivia.idPregunta}`]} 
+                    onChange={handleChange}
+                    >
+                    {/* <RadioGroup
                       aria-label={objective.index}
                       name={objective.index}
                       value={value}
                       onChange={handleChange}
-                    >
+                    > */}
                       <FormControlLabel value={respuesta} control={<Radio />} label={respuesta} />
                     </RadioGroup>
                   </FormControl>
