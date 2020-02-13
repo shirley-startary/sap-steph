@@ -22,7 +22,7 @@ export default function FloatingActionButtonSize() {
           <PlayArrowRoundedIcon />
         </Fab>
       </div>
- 
+
     </div>
   );
 }
