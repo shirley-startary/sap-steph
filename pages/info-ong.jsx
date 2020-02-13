@@ -1,6 +1,5 @@
 import React from 'react';
 import NavigationBar from '../components/navigationBar';
-import RectangularCard from '../components/rectangularCard';
 
 const infoOng = () => (
   <div>
