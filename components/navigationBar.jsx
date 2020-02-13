@@ -1,10 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Link from 'next/link';
-import goal from '../images/icons/goal1.png';
-import graphic from '../images/icons/graphic1.png';
-import agreement from '../images/icons/agreement1.png';
-import dataLogo from '../images/icons/logoLCW.png';
 
 const NavigationBar = () => (
   <>
@@ -14,31 +10,31 @@ const NavigationBar = () => (
           <li>
             <Link href="/">
               <a>
-                <i><img src={goal} alt="goal"/></i>
+                <i><img src="https://user-images.githubusercontent.com/25916511/74312032-6e296200-4d36-11ea-8151-b6ff3e941d66.png" alt="objectives" /></i>
                 Objetivos
               </a>
             </Link>
           </li>
           <li>
-            <Link href="/organizations">
+            <Link href="/organizations/">
               <a>
-                <i><img src={agreement} alt="agreement"/></i>
+                <i><img src="https://user-images.githubusercontent.com/25916511/74312447-54d4e580-4d37-11ea-80e5-6ae18e2e082f.png" alt="ongs" /></i>
                 ONGs
               </a>
             </Link>
           </li>
           <li>
-            <Link href="/latin-code-week">
+            <Link href="/latin-code-week/">
               <a>
-              <i><img src={dataLogo} alt="data logo"/></i>
+                <i><img src="https://user-images.githubusercontent.com/25916511/74395118-1e00dd00-4dd4-11ea-830a-51778b8bd4bc.png" alt="data logo" /></i>
                 Latin Code Week
               </a>
             </Link>
           </li>
           <li>
-            <Link href="/graphics">
+            <Link href="/graphics/">
               <a>
-                <i><img src={graphic} alt="graphic"/></i>
+                <i><img src="https://user-images.githubusercontent.com/25916511/74312740-d88ed200-4d37-11ea-8cfd-01b4d31e7074.png" alt="graphic" /></i>
                 Gráficas
               </a>
             </Link>
@@ -47,13 +43,13 @@ const NavigationBar = () => (
       </nav>
     </header>
 
-    <style jsx>{`
+    <style jsx>
+      {`
       header {
         width: 100%;
         position: fixed;
         z-index: 100;
-        color: #fff;
-        background: #04A7E7;
+        background: #FFF;
         padding:  15px 0px 10px 0px ;
         text-align: center;
         height:70px;
@@ -73,7 +69,7 @@ const NavigationBar = () => (
       }
       .menu a {
         display: block;
-        color: #fff;
+        color: #F0AB00;
         text-decoration: none;
       }
       .menu i {
@@ -83,9 +79,9 @@ const NavigationBar = () => (
       i img {
         width: 40px;  
         height: 40px;
-      }
-        
-    `}</style>
+      }    
+    `}
+    </style>
   </>
 );
 
