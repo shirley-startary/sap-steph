@@ -1,50 +1,42 @@
 const dataProyectos = {
-  'imagePresentation':'https://user-images.githubusercontent.com/25912292/74345231-620fc580-4d73-11ea-9720-1025fca996d6.JPG',
+  imagePresentation: 'https://user-images.githubusercontent.com/25912292/74345231-620fc580-4d73-11ea-9720-1025fca996d6.JPG',
 
-  'dataSlides':[
+  dataSlides: [
     {
       label: 'Más de 4 años del programa Latin Code Week en América Latina',
-      imgPath:'https://user-images.githubusercontent.com/25912292/74395866-06c2ef00-4dd6-11ea-8932-db075c0fb6cd.jpg',
-        
+      imgPath: 'https://user-images.githubusercontent.com/25912292/74395866-06c2ef00-4dd6-11ea-8932-db075c0fb6cd.jpg',
     },
     {
       label: 'Desarrollo de habilidades socio laborales ',
-      imgPath:'https://user-images.githubusercontent.com/25912292/74395859-0165a480-4dd6-11ea-9afd-30b30bdb5b93.jpg',
-        
+      imgPath: 'https://user-images.githubusercontent.com/25912292/74395859-0165a480-4dd6-11ea-9afd-30b30bdb5b93.jpg',
     },
     {
       label: 'Resolución de problemas en conjunto',
-      imgPath:
-        'https://user-images.githubusercontent.com/25912292/74395974-4db0e480-4dd6-11ea-80a6-26ea3fd17a9c.jpg',
+      imgPath: 'https://user-images.githubusercontent.com/25912292/74395974-4db0e480-4dd6-11ea-80a6-26ea3fd17a9c.jpg',
     },
     {
       label: 'Emprendimiento sociales',
-      imgPath:
-        'https://user-images.githubusercontent.com/25912292/74396054-8d77cc00-4dd6-11ea-8025-2ba5d3e543b6.jpg',
+      imgPath: 'https://user-images.githubusercontent.com/25912292/74396054-8d77cc00-4dd6-11ea-8025-2ba5d3e543b6.jpg',
     },
     {
       label: 'Integración de equipos multidisciplinarios.',
-      imgPath:
-        'https://user-images.githubusercontent.com/25912292/74396009-691bef80-4dd6-11ea-964b-1b2f9b175477.jpg',
+      imgPath: 'https://user-images.githubusercontent.com/25912292/74396009-691bef80-4dd6-11ea-964b-1b2f9b175477.jpg',
     },
     {
       label: 'Integración de equipos Habilidades técnicas: desarrollo de mockup de aplicación en la plataforma SAP Build.',
-      imgPath:
-        'https://user-images.githubusercontent.com/25912292/74396038-818c0a00-4dd6-11ea-983f-d52c3afdd3db.jpg',
+      imgPath: 'https://user-images.githubusercontent.com/25912292/74396038-818c0a00-4dd6-11ea-983f-d52c3afdd3db.jpg',
     },
     {
       label: 'Empresas aliadas como American Tower y Accenture que fortalecen las sesiones con la aportación de experiencia de sus voluntarios.',
-      imgPath:
-        'https://user-images.githubusercontent.com/25912292/74396142-c1eb8800-4dd6-11ea-888e-31d515baa19d.jpg',
+      imgPath: 'https://user-images.githubusercontent.com/25912292/74396142-c1eb8800-4dd6-11ea-888e-31d515baa19d.jpg',
     },
     {
       label: 'Estudiantes del Instituto Politécnico Nacional participan en Latin Code Week',
-      imgPath:
-        'https://user-images.githubusercontent.com/25912292/74395949-412c8c00-4dd6-11ea-9910-eaa3e0148b9b.jpg',
+      imgPath: 'https://user-images.githubusercontent.com/25912292/74395949-412c8c00-4dd6-11ea-9910-eaa3e0148b9b.jpg',
     },
   ],
-  
-  'data':[
+
+  data: [
     {
       title: 'One family',
       subtitulo: 'Aplicación familiar donde se plantean una meta de ahorro. Reto: Fomentar el ahorro',
@@ -69,6 +61,7 @@ const dataProyectos = {
       thumbnail: 'https://user-images.githubusercontent.com/25912292/74407837-734ee580-4df8-11ea-9ea2-2b63b1cb8ea3.JPG',
       objective: ['Objetivo 11 Ciudades y Comunidades Sostenibles', 'Objetivo 4 Educación de Calidad'],
     },
-  ]
-}
+  ],
+};
+
 export default dataProyectos;

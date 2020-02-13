@@ -31,7 +31,12 @@ const Trivia = (props) => {
                 {trivia.pregunta}
                 {trivia.respuestas.map(respuesta => (
                   <FormControl component="fieldset">
-                    <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
+                    <RadioGroup
+                      aria-label={objective.index}
+                      name={objective.index}
+                      value={value}
+                      onChange={handleChange}
+                    >
                       <FormControlLabel value={respuesta} control={<Radio />} label={respuesta} />
                     </RadioGroup>
                   </FormControl>

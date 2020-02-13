@@ -16,36 +16,36 @@ import NavigationBar from '../components/navigationBar';
 import programsOng from '../data/programs';
 
 const color = {
-  '1': '#eb1c2d',
-  '2': '#D3A029',
-  '3': '#279B48',
-  '4': '#C31F33',
-  '5': '#EF402B',
-  '6': '#26AED9',
-  '7': '#FCB712',
-  '8': '#8F1838',
-  '9': '#F36D26',
-  '10': '#E11484',
-  '11': '#F99D26',
-  '12': '#CF8D2A',
-  '13': '#48773D',
-  '14': '#187DBC',
-  '15': '#3EB049',
-  '16': '#0D568B',
-  '17': '#183668',
-}
+  1: '#eb1c2d',
+  2: '#D3A029',
+  3: '#279B48',
+  4: '#C31F33',
+  5: '#EF402B',
+  6: '#26AED9',
+  7: '#FCB712',
+  8: '#8F1838',
+  9: '#F36D26',
+  10: '#E11484',
+  11: '#F99D26',
+  12: '#CF8D2A',
+  13: '#48773D',
+  14: '#187DBC',
+  15: '#3EB049',
+  16: '#0D568B',
+  17: '#183668',
+};
 
 const useStyles = makeStyles(theme => ({
   root: {
-    margin:0,
-    padding:0,
+    margin: 0,
+    padding: 0,
     paddingTop: '0px',
   },
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
   },
-  position:{
+  position: {
     marginTop: 120,
   },
   expand: {
@@ -72,71 +72,57 @@ const InfoONG = (props) => {
     <div>
       <NavigationBar />
       <section className="position">
-      { programs.programs.map(program => (
-        <Card className={classes.root} elevation={3}>
-          <CardHeader
-            title={program.program}
-            // subheader="September 14, 2016"
-          />
-          <CardMedia
-            className={classes.media}
-            image={program.image}
-            // title="Paella dish"
-          />
-          <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {program.text}
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
-            {program.ods.map(item => {
-              return (<IconButton aria-label="share">
-                <span style={{backgroundColor:color[item], color:"white", padding:"2px"}} >{item}</span>
-              </IconButton>)
-            })}
-            
-            <IconButton
-              className={clsx(classes.expand, {
-                [classes.expandOpen]: expanded,
-              })}
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more"
-            >
-              <ExpandMoreIcon />
-            </IconButton>
-          </CardActions>
-          <Collapse in={expanded} timeout="auto" unmountOnExit>
+        { programs.programs.map(program => (
+          <Card className={classes.root} elevation={3}>
+            <CardHeader
+              title={program.program}
+            />
+            <CardMedia
+              className={classes.media}
+              image={program.image}
+            />
             <CardContent>
-              <Typography paragraph>Method:</Typography>
-              <Typography paragraph>
-                Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-                minutes.
-              </Typography>
-              <Typography paragraph>
-                remaining 4 1/2 cups chicken broth; bring to a boil.
-              </Typography>
-              <Typography paragraph>
-                again without stirring, until mussels have opened and rice is just tender, 5 to 7
-                minutes more. (Discard any mussels that don’t open.)
-              </Typography>
-              <Typography>
-                Set aside off of the heat to let rest for 10 minutes, and then serve.
+              <Typography variant="body2" color="textSecondary" component="p">
+                {program.text}
               </Typography>
             </CardContent>
-          </Collapse>
-        </Card>
-      ))}
-    </section>
+            <CardActions disableSpacing>
+              <IconButton aria-label="add to favorites">
+                <FavoriteIcon />
+              </IconButton>
+              <IconButton aria-label="share">
+                <ShareIcon />
+              </IconButton>
+              {program.ods.map(item => (
+                <IconButton aria-label="share">
+                  <span style={{ backgroundColor: color[item], color: 'white', padding: '2px' }}>{item}</span>
+                </IconButton>
+              ))}
 
-    <style jsx global>
-      {`
+              <IconButton
+                className={clsx(classes.expand, {
+                  [classes.expandOpen]: expanded,
+                })}
+                onClick={handleExpandClick}
+                aria-expanded={expanded}
+                aria-label="show more"
+              >
+                <ExpandMoreIcon />
+              </IconButton>
+            </CardActions>
+            <Collapse in={expanded} timeout="auto" unmountOnExit>
+              <CardContent>
+                <Typography paragraph>
+                  {program.more}
+                </Typography>
+              </CardContent>
+            </Collapse>
+          </Card>
+        ))}
+      </section>
+
+      <style jsx global>
+        {`
         body {
           margin: 0;
           font-family: system-ui;
@@ -147,7 +133,7 @@ const InfoONG = (props) => {
           max-width:1090px;
           margin: 0 auto;
       `}
-    </style>
+      </style>
     </div>
   );
 };
