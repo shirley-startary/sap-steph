@@ -22,14 +22,15 @@ const App = () => (
       {`
         .objectives {
           display: grid;
-          grid-gap: 15px;
+          grid-gap: 25px;
           padding: 15px;
           grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
           padding-top: 110px;
         }
-        div.objective {
-          display: block
-          margin-bottom: 0.5em;
+        .objective {
+          display: block;
+          background: grey;
+          box-shadow: 3px 3px 3px grey;
         }
         .objective img {
           border-radius: 3px;
