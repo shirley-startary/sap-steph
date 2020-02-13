@@ -15,14 +15,38 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import NavigationBar from '../components/navigationBar';
 import programsOng from '../data/programs';
 
+const color = {
+  '1': '#eb1c2d',
+  '2': '#D3A029',
+  '3': '#279B48',
+  '4': '#C31F33',
+  '5': '#EF402B',
+  '6': '#26AED9',
+  '7': '#FCB712',
+  '8': '#8F1838',
+  '9': '#F36D26',
+  '10': '#E11484',
+  '11': '#F99D26',
+  '12': '#CF8D2A',
+  '13': '#48773D',
+  '14': '#187DBC',
+  '15': '#3EB049',
+  '16': '#0D568B',
+  '17': '#183668',
+}
 
 const useStyles = makeStyles(theme => ({
   root: {
-    paddingTop: '120px',
+    margin:0,
+    padding:0,
+    paddingTop: '0px',
   },
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
+  },
+  position:{
+    marginTop: 120,
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -45,23 +69,23 @@ const InfoONG = (props) => {
   };
 
   return (
-    <>
+    <div>
       <NavigationBar />
-
+      <section className="position">
       { programs.programs.map(program => (
         <Card className={classes.root} elevation={3}>
           <CardHeader
             title={program.program}
-            subheader="September 14, 2016"
+            // subheader="September 14, 2016"
           />
           <CardMedia
             className={classes.media}
-            image="/static/images/cards/paella.jpg"
-            title="Paella dish"
+            image={program.image}
+            // title="Paella dish"
           />
           <CardContent>
             <Typography variant="body2" color="textSecondary" component="p">
-              This impressive paella is a perfect party dish and a fun meal to
+              {program.text}
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
@@ -71,6 +95,12 @@ const InfoONG = (props) => {
             <IconButton aria-label="share">
               <ShareIcon />
             </IconButton>
+            {program.ods.map(item => {
+              return (<IconButton aria-label="share">
+                <span style={{backgroundColor:color[item], color:"white", padding:"2px"}} >{item}</span>
+              </IconButton>)
+            })}
+            
             <IconButton
               className={clsx(classes.expand, {
                 [classes.expandOpen]: expanded,
@@ -103,7 +133,22 @@ const InfoONG = (props) => {
           </Collapse>
         </Card>
       ))}
-    </>
+    </section>
+
+    <style jsx global>
+      {`
+        body {
+          margin: 0;
+          font-family: system-ui;
+          background: white;
+        }
+        .position {
+          padding-top:95px;
+          max-width:1090px;
+          margin: 0 auto;
+      `}
+    </style>
+    </div>
   );
 };
 
