@@ -39,11 +39,10 @@ const styles = {
     padding: 10,
     maxWidth: 1090,
     margin: '15px auto auto 15px',
-    height: 150,
+    // height: 150,
   },
 
   thumbnail: {
-    position: 'relative',
     height: 100,
     width: '100px',
     margin: 10,
@@ -56,10 +55,10 @@ const styles = {
     flexGrow: 1,
     paddingBottom: 0,
     paddingTop: 0,
-    position:'relative',
   },
   objective: {
-    position: 'absolute', 
+    display:'flex',
+    flexDirection: 'row-reverse',
     botton:0, 
     right:0,
   },
