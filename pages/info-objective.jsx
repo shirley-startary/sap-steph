@@ -7,6 +7,8 @@ import ReactGA from 'react-ga';
 import objectives from '../data/objectives';
 import NavigationBar from '../components/navigationBar';
 import CustomizedDialogs from '../components/modal';
+import ButtonTrivia from '../components/ButtonTrivia';
+
 
 
 export default class extends React.Component {
@@ -33,10 +35,13 @@ export default class extends React.Component {
                 {objective.info}
               </Typography>
             </CardContent>
-            <CardActions>
+         
+          </Card>
+          <ButtonTrivia>
+          <CardActions>
               <CustomizedDialogs />
             </CardActions>
-          </Card>
+          </ButtonTrivia>
         </div>
 
 
