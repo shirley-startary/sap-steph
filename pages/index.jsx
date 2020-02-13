@@ -1,33 +1,48 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
+import Link from 'next/link';
 import NavigationBar from '../components/navigationBar';
-import SquareCard from '../components/squareCard';
 import objectives from '../data/objectives';
 
 const App = () => (
   <div>
     <NavigationBar />
-    <div className="position">
-      <Grid container spacing={4}>
-        {objectives.map(objective => (
-          <Grid item xs={6}>
-            <SquareCard
-              title={objective.title}
-              url={objective.url}
-            />
-          </Grid>
-        ))}
-      </Grid>
+
+    <div className="objectives">
+      { objectives.map(objective => (
+        <Link href={`/info-objective/?id=${objective.index}`} key={objective.title}>
+          <a className="objective">
+            <img src={objective.url} alt={objective.title} />
+          </a>
+        </Link>
+      ))}
     </div>
+
+    <style jsx>
+      {`
+        .objectives {
+          display: grid;
+          grid-gap: 15px;
+          padding: 15px;
+          grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+          padding-top: 110px;
+        }
+        div.objective {
+          display: block
+          margin-bottom: 0.5em;
+        }
+        .objective img {
+          border-radius: 3px;
+          width: 100%
+        }
+      `}
+    </style>
     <style jsx global>
       {`
         body {
           margin: 0;
-        font-family: system-ui;
-        background: white;
-        }
-        .position {
-          padding-top: 110px;
+          font-family: system-ui;
+          background: white;
         }
       `}
     </style>
