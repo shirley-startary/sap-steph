@@ -13,8 +13,32 @@ import objectives from '../data/objectives';
 const Trivia = (props) => {
   const { objective } = props;
   const [value, setValue] = React.useState(false);
+  const [preguntas, setPreguntas] = React.useState([
+    {
+      Pregunta1:false,
+    },{
+      Pregunta2:false,
+    },{
+      Pregunta3:false,
+    }, {
+      Pregunta4:false,
+    }, {
+      Pregunta5:false,
+    }, 
+  ]);
   const handleChange = (event) => {
-    setValue(event.target.value);
+    // console.log(event.target.value);
+    // console.log('index: ' + index);
+    // console.log('property name: '+ event.target.name.slice(8));
+    let newArr = [...preguntas]; // copying the old datas array
+    // console.log(newArr[Number(event.target.name.slice(8))-1]);
+    newArr[Number(event.target.name.slice(8)-1)][event.target.name] = event.target.value;
+    // newArr[event.target.name] = event.target.value; // replace e.target.value with whatever you want to change it to
+console.log(newArr, event.target.value);
+
+    // setDatas(newArr); 
+    setPreguntas(newArr)
+    // setValue(event.target.value);
   };
 
   return (
@@ -26,18 +50,20 @@ const Trivia = (props) => {
             <Typography className="title" variant="h4" gutterBottom>
               {objective.title}
             </Typography>
-            {objective.trivia.map(trivia => (
-              <Typography className="title" variant="h5" gutterBottom>
+            {objective.trivia.map(trivia => {
+              // console.log(trivia);
+              
+           return (<Typography className="title" variant="h5" gutterBottom>
                 {trivia.pregunta}
-                {trivia.respuestas.map(respuesta => (
+                    {trivia.respuestas.map(respuesta => (
                   <FormControl component="fieldset">
-                    <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
+                    <RadioGroup aria-label={`Pregunta${trivia.idPregunta}`} name={`Pregunta${trivia.idPregunta}`} value={preguntas[trivia.idPregunta][`Pregunta${trivia.idPregunta}`]} onChange={handleChange}>
                       <FormControlLabel value={respuesta} control={<Radio />} label={respuesta} />
                     </RadioGroup>
                   </FormControl>
-                ))}
-              </Typography>
-            ))}
+                      ))}
+              </Typography>)
+})}
           </CardContent>
         </Card>
       </div>
