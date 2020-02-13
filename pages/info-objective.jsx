@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
+import Link from 'next/link';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
@@ -35,12 +36,17 @@ export default class extends React.Component {
                 {objective.info}
               </Typography>
             </CardContent>
-         
+            {/* <CardActions>
+              <CustomizedDialogs />
+            </CardActions> */}
           </Card>
           <ButtonTrivia>
-          <CardActions>
-              <CustomizedDialogs />
-            </CardActions>
+            <Link href={`/info-objective/?id=${objective.index}`} key={objective.title}>
+              <a className="objective">
+
+                {/* <img src={objective.url} alt={objective.title} /> */}
+              </a>
+            </Link>
           </ButtonTrivia>
         </div>
 
