@@ -66,7 +66,7 @@ const dataProyectos = {
     {
       title: 'Security way',
       subtitulo: 'transporte seguro y accesible para traslado de estudiantes. Reto: Deserción escolar',
-      thumbnail: 'https://user-images.githubusercontent.com/25912292/74395005-c95d6200-4dd3-11ea-9bb7-1124d0b236c1.JPG',
+      thumbnail: 'https://user-images.githubusercontent.com/25912292/74407837-734ee580-4df8-11ea-9ea2-2b63b1cb8ea3.JPG',
       objective: ['Objetivo 11 Ciudades y Comunidades Sostenibles', 'Objetivo 4 Educación de Calidad'],
     },
   ]

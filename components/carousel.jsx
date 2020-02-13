@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
-import Paper from '@material-ui/core/Paper';
+// import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
@@ -17,19 +17,31 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 1090,
     flexGrow: 1,
     paddingTop: '0px',
+    margin:'0 auto',
   },
-  header: {
-    display: 'flex',
+  containerCarousel: {
+    position: 'relative',
+    display:'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
     alignItems: 'center',
-    height: 50,
-    paddingLeft: theme.spacing(4),
-    backgroundColor: theme.palette.background.default,
+    textAlign: 'center',
+    margin: '0 auto',
+    backgroundColor: 'rgba(255, 0, 0, 0.3)',
   },
+  textCarousel: {
+    position:'absolute',
+    fontSize: '25px',
+    color: 'black',
+    textShadow: '0px 0px 4px white',
+  },
+  
   img: {
     display: 'block',
     maxWidth: 1090,
     overflow: 'hidden',
     width: '100%',
+    height: 'auto',
     margin: '0 auto',
   },
 }));
@@ -69,9 +81,9 @@ const Carousel = (props) => {
         {data.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <div>
-               <Typography>{data[activeStep].label}</Typography>
-              <img className={classes.img} src={step.imgPath} alt={step.label} />
+              <div className={classes.containerCarousel}>
+                <Typography className={classes.textCarousel}>{data[activeStep].label}</Typography>
+                <img className={classes.img} src={step.imgPath} alt={step.label} />
               </div>
             ) : null}
           </div>
@@ -80,29 +92,20 @@ const Carousel = (props) => {
       <MobileStepper
         steps={maxSteps}	
         position="static"	
-        variant="text"	
+        variant="dots"	
         activeStep={activeStep}	
         nextButton={(	
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>	
-            Next	
+          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}	
           </Button>	
         )}	
         backButton={(	
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>	
             {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}	
-          Back	
+            
           </Button>	
         )}	
       />	
-
-      <style jsx>
-        {`
-        #carousel {
-          margin:0 auto;
-        }
-      `}
-      </style>
     </div>
   );
 };
