@@ -57,7 +57,13 @@ console.log(newArr, event.target.value);
                 {trivia.pregunta}
                     {trivia.respuestas.map(respuesta => (
                   <FormControl component="fieldset">
-                    <RadioGroup aria-label={`Pregunta${trivia.idPregunta}`} name={`Pregunta${trivia.idPregunta}`} value={preguntas[trivia.idPregunta][`Pregunta${trivia.idPregunta}`]} onChange={handleChange}>
+                    {/* <RadioGroup aria-label={`Pregunta${trivia.idPregunta}`} name={`Pregunta${trivia.idPregunta}`} value={preguntas[trivia.idPregunta][`Pregunta${trivia.idPregunta}`]} onChange={handleChange}> */}
+                    <RadioGroup
+                      aria-label={objective.index}
+                      name={objective.index}
+                      value={value}
+                      onChange={handleChange}
+                    >
                       <FormControlLabel value={respuesta} control={<Radio />} label={respuesta} />
                     </RadioGroup>
                   </FormControl>

@@ -4,7 +4,7 @@ import NavigationBar from '../components/navigationBar';
 const Programs = () => (
   <div>
     <NavigationBar />
-    <div className='position'>
+    <div className="position">
       Programs
     </div>
     <style jsx global>

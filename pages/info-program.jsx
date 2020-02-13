@@ -4,7 +4,7 @@ import NavigationBar from '../components/navigationBar';
 const infoProgram = () => (
   <div>
     <NavigationBar />
-    <div className='position'>
+    <div className="position">
       Info del programa
     </div>
     <style jsx global>
