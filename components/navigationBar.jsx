@@ -31,14 +31,14 @@ const NavigationBar = () => (
               </a>
             </Link>
           </li>
-          {/* <li>
-            <Link href="/graphics/">
+          <li>
+            <Link href="/graphics/" prefetch>
               <a>
                 <i><img src="https://user-images.githubusercontent.com/25916511/74312740-d88ed200-4d37-11ea-8cfd-01b4d31e7074.png" alt="graphic" /></i>
                 Gráficas
               </a>
             </Link>
-          </li> */}
+          </li>
         </ul>
       </nav>
     </header>
