@@ -1,53 +1,65 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import Link from 'next/link';
-import NavigationBar from '../components/navigationBar';
-import objectives from '../data/objectives';
+import Router from 'next/router';
+import imageMobile from '../images/splash-mobile.png';
+import imageTablet from '../images/splash-tablet.png';
+import imageDesktop from '../images/splash-desktop.png';
 
-const App = () => (
-  <div>
-    <NavigationBar />
 
-    <div className="objectives">
-      { objectives.map(objective => (
-        <Link href={`/info-objective/?id=${objective.index}`} key={objective.title} prefetch>
-          <a className="objective">
-            <img src={objective.url} alt={objective.title} />
-          </a>
-        </Link>
-      ))}
-    </div>
+class App extends React.Component {
+  componentDidMount() {
+    this.redirect = setTimeout(() => {
+      Router.push('/objectives');
+    }, 5000);
+  }
 
-    <style jsx>
-      {`
-        .objectives {
-          display: grid;
-          grid-gap: 25px;
-          padding: 15px;
-          grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-          padding-top: 110px;
-        }
-        .objective {
-          display: block;
-          background: grey;
-          box-shadow: 3px 3px 3px grey;
-        }
-        .objective img {
-          border-radius: 3px;
-          width: 100%
-        }
-      `}
-    </style>
-    <style jsx global>
-      {`
-        body {
-          margin: 0;
-          font-family: system-ui;
-          background: white;
-        }
-      `}
-    </style>
-  </div>
-);
+  render() {
+    return (
+      <div className="root">
+        <style jsx global>
+          {`
+            body {
+              margin: 0;
+            }
+            .root {
+              height: 100vh;
+            }
+            @media screen and (max-width: 640px) and (min-width: 0px) {
+              .root {
+                background-image: url(${imageMobile});
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+              }
+            }
+            @media screen and (max-width: 1007px) and (min-width: 641px) {
+              .root {
+                background-image: url(${imageTablet});
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+              }
+            }
+            @media screen and (min-width: 1024px) {
+              .root {
+                background-image: url(${imageTablet});
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+              }
+            }
+            @media screen and (min-width: 1280px) {
+              .root {
+                background-image: url(${imageDesktop});
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+              }
+            }
+          `}
+        </style>
+      </div>
+    );
+  }
+}
 
 export default App;
