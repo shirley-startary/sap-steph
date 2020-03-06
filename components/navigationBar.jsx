@@ -8,7 +8,7 @@ const NavigationBar = () => (
       <nav className="menu">
         <ul>
           <li>
-            <Link href="/" prefetch>
+            <Link href="/objectives">
               <a>
                 <i><img src="https://user-images.githubusercontent.com/25916511/74312032-6e296200-4d36-11ea-8151-b6ff3e941d66.png" alt="objectives" /></i>
                 Objetivos
@@ -16,7 +16,7 @@ const NavigationBar = () => (
             </Link>
           </li>
           <li>
-            <Link href="/organizations/" prefetch>
+            <Link href="/organizations/">
               <a>
                 <i><img src="https://user-images.githubusercontent.com/25916511/74312447-54d4e580-4d37-11ea-80e5-6ae18e2e082f.png" alt="ongs" /></i>
                 ONGs
@@ -24,7 +24,7 @@ const NavigationBar = () => (
             </Link>
           </li>
           <li>
-            <Link href="/latin-code-week/" prefetch>
+            <Link href="/latin-code-week/">
               <a>
                 <i><img src="https://user-images.githubusercontent.com/25916511/74395118-1e00dd00-4dd4-11ea-830a-51778b8bd4bc.png" alt="data logo" /></i>
                 Latin Code Week
@@ -32,7 +32,7 @@ const NavigationBar = () => (
             </Link>
           </li>
           <li>
-            <Link href="/graphics/" prefetch>
+            <Link href="/graphics/">
               <a>
                 <i><img src="https://user-images.githubusercontent.com/25916511/74312740-d88ed200-4d37-11ea-8cfd-01b4d31e7074.png" alt="graphic" /></i>
                 Gráficas

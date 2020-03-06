@@ -11,7 +11,7 @@ const LatinCodeWeek = () => (
     <NavigationBar />
     <div className="ongs">
       { ongs.map(ong => (
-        <Link href={`/info-ong/?id=${ong.index}`} key={ong.title} prefetch>
+        <Link href={`/info-ong/?id=${ong.index}`} key={ong.title}>
           <Paper elevation={3}>
             <Grid container spacing={2} justify="center">
               <Grid item xs={10} md={6}>

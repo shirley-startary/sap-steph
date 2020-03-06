@@ -10,7 +10,7 @@ const Objectives = () => (
 
     <div className="objectives">
       { objectives.map(objective => (
-        <Link href={`/info-objective/?id=${objective.index}`} key={objective.title} prefetch>
+        <Link href={`/info-objective/?id=${objective.index}`} key={objective.title}>
           <a className="objective">
             <img src={objective.url} alt={objective.title} />
           </a>
