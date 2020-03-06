@@ -98,7 +98,7 @@ const Trivia = (props) => {
           body {
           margin: 0;
           font-family: system-ui;
-          background: white;
+          background: #F7F7F7;
           }
         `}
       </style>

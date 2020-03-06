@@ -2,6 +2,7 @@ export default [
   {
     index: 1,
     title: 'FIN DE LA POBREZA',
+    image: 'https://user-images.githubusercontent.com/25916511/75847931-48780180-5da6-11ea-989b-550a6a38fb88.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74292647-2dadf200-4cfe-11ea-8674-80149e71ba54.png',
     info: 'Más de 700 millones de personas en el mundo aún viven en pobreza extrema sin acceso a servicios básicos como salud, educación, agua potable y asistencia sanitaria. La pobreza tiene muchas dimensiones, encontrándose entre sus causas el desempleo, la exclusión social y la alta vulnerabilidad de ciertas poblaciones a desastres naturales y enfermedades. El ODS 1 busca erradicar la pobreza extrema en todo el mundo. Se considera como población en pobreza extrema a quienes viven con menos de 1.25 dólares al día. La pobreza en México solo se ha reducido 2.5% en 10 años; en Chiapas, Guerrero, Oaxaca y Veracruz aumentó en el mismo periodo.',
     trivia: [
@@ -67,6 +68,7 @@ export default [
   {
     index: 2,
     title: 'HAMBRE CERO',
+    image: 'https://user-images.githubusercontent.com/25916511/75847937-4ada5b80-5da6-11ea-8da2-0bc320c38f5f.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74292779-8aa9a800-4cfe-11ea-8996-00a0f4823b36.png',
     info: 'El mundo se está replanteando la producción y distribución de alimentos. De no mejorar la prácticas en agricultura, silvicultura, pesca, etc., será imposible alimentar a los 821 millones de personas que padecen hambre actualmente y a los 2 millones adicionales que se calcula estén en situación de desnutrición para 2050. Invertir en la producción sostenible de alimentos es necesario para erradicar el hambre, asegurar el desarrollo de zonas rurales y sus habitantes, y garantizar la preservación del medio ambiente. ',
     trivia: [
@@ -133,6 +135,7 @@ export default [
   {
     index: 3,
     title: 'SALUD Y BIENESTAR',
+    image: 'https://user-images.githubusercontent.com/25916511/75847938-4c0b8880-5da6-11ea-9a4c-9781c6e2872e.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74292797-99905a80-4cfe-11ea-8abb-3423adc2a7b5.png',
     info: 'Para lograr los Objetivos de Desarrollo Sostenible es fundamental garantizar una vida saludable y promover el bienestar universal. Sin embargo, en muchas regiones se enfrentan a graves riesgos para la salud, como altas tasas de mortalidad materna y neonatal, la propagación de enfermedades infecciosas y no transmisibles y una mala salud reproductiva. En las últimas décadas se han obtenido grandes avances en relación con el aumento de la esperanza de vida y la reducción de algunas de las causas de muerte más comunes como la mortalidad infantil y materna. Por ello, entre otras medidas, para lograr este objetivo se deberá mejorar la asistencia cualificada en los partos. Asimismo, para alcanzar el objetivo de reducir hasta 35% las muertes prematuras por enfermedades no transmisibles para 2030, se requerirá hacer uso de tecnologías más eficaces, combustibles limpios para cocinar y educación sobre los riesgos del tabaco.',
     trivia: [
@@ -200,6 +203,7 @@ export default [
   {
     index: 4,
     title: 'EDUCACIÓN DE CALIDAD',
+    image: 'https://user-images.githubusercontent.com/25916511/75847941-4d3cb580-5da6-11ea-9c3c-2d34624dd115.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74292817-a4e38600-4cfe-11ea-84f4-709632d35844.png',
     info: 'La educación es la base para mejorar nuestra vida y el desarrollo sostenible. Además de mejorar la calidad de vida de las personas, la educación inclusiva y equitativa abastece a la población con herramientas para desarrollar soluciones innovadoras a problemas globales. En la actualidad más de 265 millones de niños y niñas no tienen acceso a la educación y quienes asisten a la escuela carecen de los conocimientos básicos de lectura y aritmética. Las razones de la falta de educación de calidad son la escasez de docentes capacitados, infraestructura y la falta de equidad en oportunidades para niños y niñas de zonas rurales. Para que se brinde educación de calidad e igualitaria se debe invertir en becas educativas, talleres de formación para docentes, construcción de escuelas y una mejora del acceso al agua y electricidad en estas. ',
     trivia: [
@@ -268,6 +272,7 @@ export default [
   {
     index: 5,
     title: 'IGUALDAD DE GÉNERO',
+    image: 'https://user-images.githubusercontent.com/25916511/75847944-4dd54c00-5da6-11ea-8a1e-7a166ce2826e.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74292834-b036b180-4cfe-11ea-8d46-4af5c0fcbebc.png',
     info: 'La igualdad entre los géneros no es solo un derecho humano fundamental, sino la base necesaria para conseguir un mundo pacífico, próspero y sostenible. Lamentablemente, en la actualidad, 1 de cada 5 mujeres y niñas entre 15 y 49 años afirmaron haber experimentado violencia física o sexual, o ambas, en manos de su pareja. Además, 49 países no tienen leyes que protejan a las mujeres de la violencia doméstica. Asimismo, aunque se ha avanzado a la hora de proteger a las mujeres y niñas de prácticas nocivas como el matrimonio infantil y la mutilación genital femenina (MGF), que ha disminuido en un 30% en la última década, aún queda mucho trabajo por hacer para acabar con esas prácticas. Si se facilita la igualdad a las mujeres y niñas en el acceso a la educación, a la atención médica, a un trabajo decente, y una representación en los procesos de adopción de decisiones políticas y económicas, se estarán impulsando las economías sostenibles y las sociedades y la humanidad en su conjunto se beneficiarán al mismo tiempo. ',
     trivia: [
@@ -322,6 +327,7 @@ export default [
   {
     index: 6,
     title: 'AGUA LIMPIA Y SANEAMIENTO',
+    image: 'https://user-images.githubusercontent.com/25916511/75847945-4f067900-5da6-11ea-8d6e-3857eadcdaac.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74292854-bd53a080-4cfe-11ea-8986-4fc21c8c92e7.png',
     info: 'El agua libre de impurezas y accesible para todos es parte esencial del mundo en que queremos vivir. Sin embargo, actualmente el reparto del agua no es el adecuado y para el año 2050 se espera que al menos 25% de la población mundial viva en un país afectado por escasez crónica y reiterada de agua dulce. Actualmente la sequía afecta a algunos de los países más pobres del mundo, recrudece el hambre y la desnutrición. Esa escasez de recursos hídricos, junto con la mala calidad del agua y el saneamiento inadecuado repercuten en la seguridad alimentaria, los medios de subsistencia y la oportunidad de educación para las familias pobres en todo el mundo. Afortunadamente, se han hecho algunos avances en la última década y más del 90% de la población mundial tiene acceso a fuentes de agua potable mejoradas. ',
     trivia: [
@@ -380,6 +386,7 @@ export default [
   {
     index: 7,
     title: 'ENERGÍA ASEQUIBLE Y NO CONTAMINANTE',
+    image: 'https://user-images.githubusercontent.com/25916511/75847949-50d03c80-5da6-11ea-9a66-11cc68e7d748.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74292871-c6447200-4cfe-11ea-927d-709ea059ce5d.png',
     info: 'La energía es fundamental para casi todos los grandes desafíos y oportunidades a los que hace frente el mundo actualmente, sea la generación de empleo, la seguridad, el cambio climático o la producción de alimentos. Es vital asegurar el acceso universal a los servicios de energía modernos, mejorar el rendimiento energético y aumentar el uso de fuentes renovables para crear comunidades más sostenibles e inclusivas y para la resiliencia ante problemas ambientales como el cambio climático. Se debe aumentar el uso de energía renovable en servicios como la calefacción y el transporte. Asimismo, es necesaria la inversión pública-privada en energía; así como mayor financiamiento y diseño de políticas públicas para promover la adopción de tecnologías más eficientes y menos contaminantes. ',
     trivia: [
@@ -442,6 +449,7 @@ export default [
   {
     index: 8,
     title: 'TRABAJO DECENTE Y CRECIMIENTO ECONÓMICO',
+    image: 'https://user-images.githubusercontent.com/25916511/75847952-5168d300-5da6-11ea-8cd1-1e749d31cb9b.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74292896-d1979d80-4cfe-11ea-874f-f81f55acee1d.png',
     info: 'Aproximadamente la mitad de la población mundial vive con el equivalente a 2 dólares estadounidenses por día, siendo la tasa mundial de desempleo de 5.7%. Aunque la tasa media de crecimiento anual del PIB real per cápita en todo el mundo va en aumento año tras año, todavía hay muchos países en los que sus tasas de crecimiento se están desacelerando, encontrándose lejos de alcanzar la tasa de 7% establecida para 2030. La disminución de la productividad laboral y aumento de las tasas de desempleo influyen negativamente en la calidad de vida y los salarios. El aumento de la productividad laboral, la reducción de la tasa de desempleo, especialmente entre los jóvenes, y la mejora del acceso a los servicios financieros para gestionar los ingresos, acumular activos y realizar inversiones productivas son componentes esenciales para un crecimiento económico sostenible e inclusivo. ',
     trivia: [
@@ -505,6 +513,7 @@ export default [
   {
     index: 9,
     title: 'INDUSTRIA, INNOVACIÓN E INFRAESTRUCTURA',
+    image: 'https://user-images.githubusercontent.com/25916511/75847957-53329680-5da6-11ea-85dc-3f3844e13319.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74292911-dfe5b980-4cfe-11ea-96d9-5b8b0ae24827.png',
     info: 'La inversión en infraestructura (transporte, riego agrícola, energía, tecnologías de la información y la comunicación) es fundamental para lograr un desarrollo sostenible, empoderar a las sociedades, fomentar la inclusión social y construir ciudades más amigables con el medio ambiente. La tecnología debe ser la base de los esfuerzos para alcanzar los objetivos medioambientales, como el aumento de recursos y la eficiencia energética. Sin tecnología e innovación, la industrialización no ocurrirá, y sin industrialización, no habrá desarrollo. Es necesario invertir en productos de alta tecnología que mejoren los procesos de industrias como la manufactura, así como invertir en telecomunicaciones e infraestructura para conectar a las personas y generar oportunidades. ',
     trivia: [
@@ -571,6 +580,7 @@ export default [
   {
     index: 10,
     title: 'REDUCCIÓN DE LAS DESIGUALDADES',
+    image: 'https://user-images.githubusercontent.com/25916511/75847958-54fc5a00-5da6-11ea-8054-a00b680e6caa.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74292944-f7bd3d80-4cfe-11ea-9e9f-b485f7289328.png',
     info: 'A pesar de que la desigualdad de ingresos entre países se ha reducido, dentro de los propios países esta ha aumentado. Lo anterior confirma que el crecimiento económico no es suficiente para reducir la pobreza si este no es inclusivo y considera las tres dimensiones del desarrollo sostenible: económica, social y ambiental. Con el fin de reducir la desigualdad se ha recomendado la implementación de políticas universales que atiendan las necesidades de poblaciones desfavorecidas y marginadas. Por ejemplo, que dentro de los tratados internacionales se sigan favoreciendo las exportaciones de países en desarrollo, además de aumentar su participación a través del voto dentro del Fondo Monetario Internacional (FMI). La innovación y tecnología tienen un rol fundamental para reducir esta brecha. ',
     trivia: [
@@ -639,6 +649,7 @@ export default [
   {
     index: 11,
     title: 'CIUDADES Y COMUNIDADES SOSTENIBLES',
+    image: 'https://user-images.githubusercontent.com/25916511/75847959-5594f080-5da6-11ea-9430-b8f17d13d0f8.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74292958-0277d280-4cff-11ea-9f03-2a71708659e8.png',
     info: 'Las ciudades son semilleros de ideas, comercio, cultura, ciencia, productividad y desarrollo social. En los últimos decenios el mundo ha experimentado un crecimiento urbano sin precedentes. En 2015, cerca de 4000 millones de personas vivían en ciudades y se prevé que ese número aumente hasta unos 5000 millones para 2030. Por lo tanto, se necesita mejorar la planificación y gestión de las ciudades para que los espacios urbanos sean más inclusivos, productivos y sostenibles. Actualmente, la sociedad enfrenta distintos retos para lograr el establecimiento de espacios urbanos sostenibles. Los problemas comunes de las ciudades son la congestión de movilidad, falta de fondos para prestar servicios básicos, falta de políticas apropiadas en materia de tierra y vivienda, y el deterioro de la infraestructura. Debemos asegurar ciudades con acceso a servicios básicos, energía, vivienda, transporte y oportunidades para todas las personas. ',
     trivia: [
@@ -707,6 +718,7 @@ export default [
   {
     index: 12,
     title: 'PRODUCCIÓN Y CONSUMO RESPONSABLES',
+    image: 'https://user-images.githubusercontent.com/25916511/75847963-56c61d80-5da6-11ea-8f89-1d2d7435e156.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74292969-0e639480-4cff-11ea-9210-f45d1f169aaa.png',
     info: 'El consumo y la producción sostenible consisten en fomentar el uso eficiente de los recursos y la energía, la construcción de infraestructura que no dañe el medio ambiente, la mejora del acceso a los servicios básicos y la creación de empleos ecológicos, bien remunerados y con buenas condiciones laborales.  Todo ello se traduce en una mejor calidad de vida para todos y el desarrollo económico y social de los países. En la actualidad, el consumo de recursos naturales está aumentando, particularmente en Asia oriental. Por ello, las empresas y gobiernos deben de mejorar sus prácticas para generar un desarrollo económico a través del uso adecuado de estos recursos, evitando la degradación de ecosistemas y contaminación del medio ambiente. Para logarlo es necesario adoptar un enfoque sistémico entre los participantes de la cadena de suministro, desde el productor hasta el consumidor final. ',
     trivia: [
@@ -775,6 +787,7 @@ export default [
   {
     index: 13,
     title: 'ACCIÓN POR EL CLIMA',
+    image: 'https://user-images.githubusercontent.com/25916511/75847965-57f74a80-5da6-11ea-98b5-6140a7aac402.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74292991-1b808380-4cff-11ea-9b89-8bb7bbfce9c9.png',
     info: 'El cambio climático es un reto global que requiere que la comunidad internacional trabaje de forma coordinada y precisa para que los países avancen hacia una economía baja en carbono. Para fortalecer la respuesta global a la amenaza del cambio climático, los países adoptaron el Acuerdo de París en la COP21 en París, que entró en vigor en noviembre de 2016. En el acuerdo, todos los países acordaron trabajar para reducir el calentamiento global a menos de 2 grados centígrados. La implementación del Acuerdo de París es esencial para alcanzar los Objetivos de Desarrollo Sostenible, y proporciona una hoja de ruta para acciones que reducirán las emisiones y crearán la conciencia climática que el mundo necesita.',
     trivia: [
@@ -843,6 +856,7 @@ export default [
   {
     index: 14,
     title: 'VIDA SUBMARINA',
+    image: 'https://user-images.githubusercontent.com/25916511/75847969-59287780-5da6-11ea-9354-d2264e7fe2a0.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74293019-263b1880-4cff-11ea-8663-bb1fe82aa35d.png',
     info: 'Los océanos del mundo —su temperatura, química, corrientes y vida— mueven sistemas que hacen que la Tierra sea habitable para la humanidad. Las precipitaciones, el agua potable, el clima, las costas, gran parte de nuestros alimentos e incluso el oxígeno del aire que respiramos provienen, en última instancia del mar y son regulados por este. Históricamente, los océanos y los mares han sido cauces vitales del comercio y el transporte. La gestión prudente de este recurso es clave para el futuro sostenible. Sin embargo, en la actualidad existe un continuo deterioro de las aguas costeras, debido a la contaminación y la acidificación de los océanos, que está teniendo un efecto adverso sobre el funcionamiento de los ecosistemas y la biodiversidad, y que también está afectando negativamente a la pesca de pequeña escala. Las áreas marinas protegidas deben ser administradas de manera efectiva, contar con recursos suficientes y regulaciones que ayuden a reducir la sobrepesca, la contaminación marina y la acidificación de los océanos.',
     trivia: [
@@ -911,6 +925,7 @@ export default [
   {
     index: 15,
     title: 'VIDA DE ECOSISTEMAS TERRESTRES',
+    image: 'https://user-images.githubusercontent.com/25916511/75847972-5af23b00-5da6-11ea-85f9-e28539c4a318.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74293060-4074f680-4cff-11ea-8567-0acd8e549172.png',
     info: '30.7% de la superficie terrestre está cubierta por bosques y estos, además de proporcionar seguridad alimentaria, son fundamentales para combatir el cambio climático. Al proteger los bosques, también podremos fortalecer la gestión de los recursos naturales y aumentar la productividad de la tierra. Actualmente, 13 millones de hectáreas de bosque desaparecen cada año y la degradación persistente de las zonas áridas está provocando además la desertificación de 3mil 600 millones de hectáreas. Aunque un 15% de la tierra se encuentra actualmente bajo protección, la biodiversidad aún está en riesgo. La deforestación y la desertificación, provocadas por las actividades humanas y el cambio climático, suponen grandes retos para el desarrollo sostenible y han afectado la vida y los medios de vida de millones de personas en la lucha contra la pobreza. Situación en México: La superficie cultivable de México perdió 146 millones de hectáreas desde 2000, 6% menos del total. 40% de la superficie nacional tiene un severo grado de erosión y pierde 400,000 hectáreas de bosques cada año según datos del 2014. ',
     trivia: [
@@ -975,6 +990,7 @@ export default [
   {
     index: 16,
     title: 'PAZ, JUSTICIA E INSTITUCIONES SÓLIDAS',
+    image: 'https://user-images.githubusercontent.com/25916511/75847976-5c236800-5da6-11ea-937f-a17e9cca1068.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74293067-4a96f500-4cff-11ea-8428-447b4d99e9b4.png',
     info: 'El homicidio, la violencia contra los niños y niñas, la trata de personas y la violencia sexual, son temas que deben ser abordados para crear sociedades pacíficas e inclusivas. La violación de los derechos de menores de edad a través de la agresión y la violencia sexual siguen asolando a muchos países en todo el mundo. Para hacer frente a estos desafíos y construir sociedades más pacíficas e inclusivas es necesario que se establezcan reglamentaciones más eficientes y transparentes, y presupuestos gubernamentales integrales y realistas. Uno de los primeros pasos para la protección de los derechos individuales es la implementación del registro de nacimientos en todo el mundo y la creación de instituciones independientes enfocadas en la defensa de derechos humanos. ',
     trivia: [
@@ -1038,6 +1054,7 @@ export default [
   {
     index: 17,
     title: 'ALIANZAS PARA LOGRAR LOS OBJETIVOS',
+    image: 'https://user-images.githubusercontent.com/25916511/75847979-5e85c200-5da6-11ea-8933-8fb4c005eeab.jpg',
     url: 'https://user-images.githubusercontent.com/25916511/74293077-57b3e400-4cff-11ea-9244-bd2e1e596991.png',
     info: 'Para alcanzar el desarrollo sostenible se requiere de alianzas entre los gobiernos, el sector privado y la sociedad civil construidas con base a valores, visión y metas compartidas. Es importante que estas se implementen a nivel global, regional, nacional y local.',
     trivia: [

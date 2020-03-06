@@ -1,12 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import Card from '@material-ui/core/Card';
 import Link from 'next/link';
+import ReactGA from 'react-ga';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Fab from '@material-ui/core/Fab';
-import PlayArrowRoundedIcon from '@material-ui/icons/PlayArrowRounded';
-import ReactGA from 'react-ga';
+import Grid from '@material-ui/core/Grid';
+import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
+
 import objectives from '../data/objectives';
 import NavigationBar from '../components/navigationBar';
 
@@ -25,32 +28,61 @@ export default class extends React.Component {
     return (
       <div>
         <NavigationBar />
+
         <div className="information">
           <Card>
             <CardContent>
-              <Typography className="title" variant="h4" gutterBottom>
-                {objective.title}
-              </Typography>
-              <Typography className="title" gutterBottom>
-                {objective.info}
-              </Typography>
+              <Grid container spacing={3} alignItems="center">
+                <Grid item xs={12}>
+                  <Typography variant="h4" gutterBottom align="center">
+                    {objective.title}
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <img src={objective.image} className="imagePresentation" alt="dummy" />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <Typography gutterBottom>
+                    {objective.info}
+                  </Typography>
+                </Grid>
+              </Grid>
+              <CardActions>
+                <Grid container justify="flex-end" alignItems="flex-end">
+                  <Link href={`/trivia/?id=${objective.index}`} key={objective.title} className="button">
+                    <a className="objective">
+                      <Fab color="secondary" aria-label="add" variant="extended">
+                        <SportsEsportsIcon />
+                        Trivia
+                      </Fab>
+                    </a>
+                  </Link>
+                </Grid>
+              </CardActions>
+
             </CardContent>
           </Card>
-          <Link href={`/trivia/?id=${objective.index}`} key={objective.title}>
-            <a className="objective">
-              <Fab color="secondary" aria-label="add">
-                <PlayArrowRoundedIcon />
-              </Fab>
-            </a>
-          </Link>
         </div>
-
 
         <style jsx>
           {`
+            img.imagePresentation {
+              width:100%;
+            }
             .information {
-              padding: 15px;
-              padding-top: 100px;
+              padding: 10%;
+            }
+            .objective {
+              text-decoration: none;
+            }
+            .button {
+              margin-left: auto;
+              margin: 25%;
+            }
+            @media screen and (max-width: 640px) and (min-width: 0px) {
+              .information {
+                padding-top: 30%;
+              }
             }
           `}
         </style>
@@ -59,7 +91,7 @@ export default class extends React.Component {
             body {
             margin: 0;
             font-family: system-ui;
-            background: white;
+            background: #F7F7F7;
             }
           `}
         </style>

@@ -9,7 +9,7 @@ class App extends React.Component {
   componentDidMount() {
     this.redirect = setTimeout(() => {
       Router.push('/objectives');
-    }, 5000);
+    }, 1000);
   }
 
   render() {
