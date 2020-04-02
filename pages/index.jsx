@@ -1,63 +1,79 @@
 import React from 'react';
 import Router from 'next/router';
-import imageMobile from '../images/splash-mobile.png';
-import imageTablet from '../images/splash-tablet.png';
-import imageDesktop from '../images/splash-desktop.png';
+import Box from '@material-ui/core/Box';
+import imageCirculo from '../images/splash/Círculo.png';
+import imageFondo from '../images/splash/Fondo.png';
+import imageLogoJA from '../images/splash/LogoJA.png';
+import imageSAP from '../images/splash/SAP.png';
 
 
 class App extends React.Component {
   componentDidMount() {
     this.redirect = setTimeout(() => {
       Router.push('/objectives');
-    }, 1000);
+    }, 5000);
   }
 
   render() {
     return (
-      <div className="root">
+      <>
+        <Box
+          style={{
+            backgroundImage: `url(${imageFondo})`,
+            backgroundPosition: 'center center',
+            backgroundSize: 'cover',
+            height: '100vh',
+            width: '100vw',
+          }}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <img
+            src={imageCirculo}
+            alt="fondo"
+            style={{
+              height: '', width: '30%',
+            }}
+          />
+          <Box
+            style={{
+              height: '',
+              width: '100%',
+              position: 'fixed',
+              bottom: 0,
+              background: '#ffffff',
+              zIndex: 1,
+            }}
+            display="flex"
+            justifyContent="space-between"
+          >
+            <img
+              src={imageLogoJA}
+              alt="fondo"
+              style={{
+                width: '25%',
+              }}
+            />
+            <img
+              src={imageSAP}
+              alt="fondo"
+              style={{
+                height: '',
+                width: '25%',
+              }}
+            />
+          </Box>
+        </Box>
         <style jsx global>
           {`
-            body {
-              margin: 0;
-            }
-            .root {
-              height: 100vh;
-            }
-            @media screen and (max-width: 640px) and (min-width: 0px) {
-              .root {
-                background-image: url(${imageMobile});
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            @media screen and (max-width: 1007px) and (min-width: 641px) {
-              .root {
-                background-image: url(${imageTablet});
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            @media screen and (min-width: 1024px) {
-              .root {
-                background-image: url(${imageTablet});
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            @media screen and (min-width: 1280px) {
-              .root {
-                background-image: url(${imageDesktop});
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-              }
-            }
-          `}
+          body {
+            margin: 0;
+            padding: 0;
+          }
+         `}
         </style>
-      </div>
+      </>
     );
   }
 }
