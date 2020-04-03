@@ -1,63 +1,113 @@
 import React from 'react';
-import Router from 'next/router';
-import imageMobile from '../images/splash-mobile.png';
-import imageTablet from '../images/splash-tablet.png';
-import imageDesktop from '../images/splash-desktop.png';
+import Box from '@material-ui/core/Box';
+import Link from '@material-ui/core/Link';
+import Fab from '@material-ui/core/Fab';
+import imageCirculo from '../images/splash/Círculo.png';
+import imageFondo from '../images/splash/Fondo.png';
+import imageLogoJA from '../images/splash/LogoJA.png';
+import imageSAP from '../images/splash/SAP.png';
 
 
 class App extends React.Component {
-  componentDidMount() {
-    this.redirect = setTimeout(() => {
-      Router.push('/objectives');
-    }, 1000);
-  }
-
   render() {
     return (
-      <div className="root">
+      <>
+        <Box
+          style={{
+            backgroundImage: `url(${imageFondo})`,
+            backgroundPosition: 'center center',
+            backgroundSize: 'cover',
+            height: '100vh',
+            width: '100vw',
+          }}
+        >
+          <Box
+            style={{
+              height: '70vh',
+              width: '100%',
+            }}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <img
+              src={imageCirculo}
+              alt="fondo"
+              className="circle"
+            />
+          </Box>
+          <Box
+            style={{
+              height: '30vh',
+              width: '100%',
+            }}
+            display="flex"
+            justifyContent="center"
+            alignItems="flex-start"
+          >
+            <Link href="/objectives">
+              <a>
+                <Fab
+                  aria-label="add"
+                  variant="extended"
+                  style={{
+                  backgroundColor: 'white',
+                  color: '#F0AB00',
+                  fontWeight: 'bold',
+                }}>
+                  INGRESA
+                </Fab>
+              </a>
+            </Link>
+          </Box>
+          <Box
+            style={{
+              height: '',
+              width: '100%',
+              position: 'fixed',
+              bottom: 0,
+              background: '#ffffff',
+              zIndex: 1,
+            }}
+            display="flex"
+            justifyContent="space-between"
+          >
+            <img
+              src={imageLogoJA}
+              alt="LogoJA"
+              className="logos"
+
+            />
+            <img
+              src={imageSAP}
+              alt="imageSAP"
+              className="logos"
+            />
+          </Box>
+        </Box>
         <style jsx global>
           {`
-            body {
-              margin: 0;
-            }
-            .root {
-              height: 100vh;
-            }
-            @media screen and (max-width: 640px) and (min-width: 0px) {
-              .root {
-                background-image: url(${imageMobile});
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
+          body {
+            margin: 0;
+            padding: 0;
+          }
+          .circle {
+            width: 80%;
+          }
+          .logos {
+            width: 40%;
+          }
+          @media screen and (min-width: 1280px) {
+              .circle {
+                width: 30%;
+              }
+              .logos {
+                width: 25%;
               }
             }
-            @media screen and (max-width: 1007px) and (min-width: 641px) {
-              .root {
-                background-image: url(${imageTablet});
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            @media screen and (min-width: 1024px) {
-              .root {
-                background-image: url(${imageTablet});
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-              }
-            }
-            @media screen and (min-width: 1280px) {
-              .root {
-                background-image: url(${imageDesktop});
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-              }
-            }
-          `}
+         `}
         </style>
-      </div>
+      </>
     );
   }
 }
