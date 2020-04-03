@@ -16,7 +16,7 @@ import NavigationBar from '../components/navigationBar';
 
 export default class extends React.Component {
   static async getInitialProps({ query }) {
-    ReactGA.initialize('UA-158372514-1');
+    ReactGA.initialize('UA-162642421-1');
     ReactGA.pageview(`/info-objective/?id=${parseInt(query.id, 10)}`);
     const objective = await objectives[parseInt(query.id, 10) - 1];
     return { objective };
