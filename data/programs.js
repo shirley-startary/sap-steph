@@ -101,7 +101,7 @@ export default [
         program: 'Diversidad e inclusión de género en la economía digital',
         image: '',
         text: 'Como parte de los compromisos de SAP México para contribuir a los ODS de Naciones Unidas, en 2019 se alió con Laboratoria para formar a la octava generación de desarrolladoras front-end y UX en la Ciudad de México.',
-        paises: [],
+        paises: ['México'],
         ods: ['4', '5', '8', '17'],
         more: 'Fueron más de 40 mujeres quienes se capacitaron desde junio hasta noviembre de 2019 en Javascript, HTML, CSS, React y otras herramientas, complementando esta currícula con el desarrollo de habilidades blandas. A través de conferencias, talleres y mentorías, SAP México contribuyó con la participación de voluntarios a la formación de esta generación.',
       },
