@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
 import Fab from '@material-ui/core/Fab';
-import imageCirculo from '../images/splash/Círculo.png';
+import imageCirculo from '../images/splash/Circulo.png';
 import imageFondo from '../images/splash/Fondo.png';
 import imageLogoJA from '../images/splash/LogoJA.png';
 import imageSAP from '../images/splash/SAP.png';
